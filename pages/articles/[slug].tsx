@@ -1,0 +1,59 @@
+import React from "react"
+import Layout from '../../components/Layout'
+import Article from '../../components/Article'
+import Head from 'next/head'
+import dynamic from 'next/dynamic'
+// import utilStyles from '../../styles/utils.module.css'
+import { GetStaticProps, GetStaticPaths } from 'next'
+import { getAllSlug } from '../../lib/articles'
+import articleIds from '../../gen/articleIds.json'
+
+// const articleDir = path.join(process.cwd(), 'articles')
+type Props = {
+  fileName: string
+  articleId: string
+  title: string
+  date: string
+}
+
+export default (props: Props) => {
+  const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
+
+  return (
+    <>
+      <Head>
+        <title>{props.title}</title>
+      </Head>
+      <Layout>
+        <Article
+          title={props.title}
+          date={props.date}
+        >
+          <MDX />
+        </Article>
+      </Layout>
+    </>
+  )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = getAllSlug()
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params.slug as string
+  const fileName = articleIds[slug]
+  // const data = articleList[slug]
+  const { frontMatter } = await import(`../../articles/${fileName}`)
+  return {
+    props: {
+      fileName,
+      articleId: slug,
+      ...frontMatter
+    }
+  }
+}

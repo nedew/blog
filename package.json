@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node script/genArticleJson.mjs && next dev",
+    "build": "node script/genArticleJson.mjs && next build",
     "start": "next start"
   },
   "dependencies": {
+    "@next/mdx": "^9.5.2",
+    "gray-matter": "^4.0.2",
     "next": "9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10",
+    "stringify-object": "^3.3.0"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^1.6.18",
+    "@types/node": "^14.0.9",
+    "@types/react": "^16.9.35",
+    "typescript": "^3.9.3"
   }
 }
