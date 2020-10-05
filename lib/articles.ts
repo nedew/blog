@@ -10,7 +10,6 @@ export function getSortedPostsData() {
 
 export function getAllSlug() {
   return Object.keys(articleIds).map(id => {
-    console.log(id)
     return {
       params: {
         slug: id

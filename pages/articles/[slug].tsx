@@ -14,6 +14,7 @@ type Props = {
   articleId: string
   title: string
   date: string
+  tags: string[]
 }
 
 export default (props: Props) => {
@@ -28,6 +29,7 @@ export default (props: Props) => {
         <Article
           title={props.title}
           date={props.date}
+          tags={props.tags}
         >
           <MDX />
         </Article>

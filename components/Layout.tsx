@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
 import styles from './layout.module.scss'
 
 export default function Layout({
@@ -15,13 +17,9 @@ export default function Layout({
           content="My Blog"
         />
       </Head>
-      <header className={styles.header}>
-        <div>This is header!</div>
-      </header>
+      <Header />
       <main className={styles.container}>{children}</main>
-      <footer className={styles.footer}>
-        <div>This is footer?</div>
-      </footer>
+      <Footer />
     </>
   )
 }
