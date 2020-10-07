@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import articleIds from '../gen/articleIds.json'
 
-const articlesDir = path.join(process.cwd(), 'articles')
+// const articlesDir = path.join(process.cwd(), 'articles')
 
 export function getSortedPostsData() {
 
