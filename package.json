@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node script/genArticleJson.mjs && next dev",
-    "build": "node script/genArticleJson.mjs && next build",
+    "dev": "node script/generate.mjs && next dev",
+    "build": "node script/generate.mjs && next build",
     "start": "next start"
   },
   "dependencies": {

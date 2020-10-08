@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { getAllTag } from '../../lib/tagUtil'
+import tagMap from '../../gen/tagMap.json'
 
 type Props = {
   tag: string
@@ -17,7 +17,11 @@ export default (props: Props) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllTag()
+  const paths = Object.keys(tagMap).map(tag => {
+    return {
+      params: { tag }
+    }
+  })
   return {
     paths,
     fallback: false
@@ -25,9 +29,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const tag = params.tag as string  
   return {
     props: {
-      tag: params.tag
+      tag: tag,
+      articles: tagMap[tag],
     }
   }
 }

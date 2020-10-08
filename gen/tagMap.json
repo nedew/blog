@@ -1,17 +1,53 @@
 {
-  "Dev": [
-    "62426",
-    "89546",
-    "13857"
+  "dev": [
+    {
+      "slug": "62426",
+      "title": "Test MDX Document No.1",
+      "date": "2020-10-02-04-19"
+    },
+    {
+      "slug": "89546",
+      "title": "Test MDX Document No.2",
+      "date": "2020-10-03-15-38"
+    },
+    {
+      "slug": "13857",
+      "title": "Test MDX Document No.3",
+      "date": "2020-10-04-22-19"
+    }
   ],
-  "Next.js": [
-    "62426",
-    "89546",
-    "13857"
+  "nextjs": [
+    {
+      "slug": "62426",
+      "title": "Test MDX Document No.1",
+      "date": "2020-10-02-04-19"
+    },
+    {
+      "slug": "89546",
+      "title": "Test MDX Document No.2",
+      "date": "2020-10-03-15-38"
+    },
+    {
+      "slug": "13857",
+      "title": "Test MDX Document No.3",
+      "date": "2020-10-04-22-19"
+    }
   ],
-  "React": [
-    "62426",
-    "89546",
-    "13857"
+  "react": [
+    {
+      "slug": "62426",
+      "title": "Test MDX Document No.1",
+      "date": "2020-10-02-04-19"
+    },
+    {
+      "slug": "89546",
+      "title": "Test MDX Document No.2",
+      "date": "2020-10-03-15-38"
+    },
+    {
+      "slug": "13857",
+      "title": "Test MDX Document No.3",
+      "date": "2020-10-04-22-19"
+    }
   ]
 }

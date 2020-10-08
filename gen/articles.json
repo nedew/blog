@@ -6,9 +6,9 @@
       "title": "Test MDX Document No.1",
       "date": "2020-10-02-04-19",
       "tags": [
-        "Dev",
-        "Next.js",
-        "React"
+        "dev",
+        "nextjs",
+        "react"
       ]
     }
   },
@@ -19,9 +19,9 @@
       "title": "Test MDX Document No.2",
       "date": "2020-10-03-15-38",
       "tags": [
-        "Dev",
-        "Next.js",
-        "React"
+        "dev",
+        "nextjs",
+        "react"
       ]
     }
   },
@@ -32,9 +32,9 @@
       "title": "Test MDX Document No.3",
       "date": "2020-10-04-22-19",
       "tags": [
-        "Dev",
-        "Next.js",
-        "React"
+        "dev",
+        "nextjs",
+        "react"
       ]
     }
   }

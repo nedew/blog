@@ -5,7 +5,6 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 // import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { getAllSlug } from '../../lib/articles'
 import articleIds from '../../gen/articleIds.json'
 
 // const articleDir = path.join(process.cwd(), 'articles')
@@ -39,7 +38,13 @@ export default (props: Props) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllSlug()
+  const paths = Object.keys(articleIds).map(id => {
+    return {
+      params: {
+        slug: id
+      }
+    }
+  })
   return {
     paths,
     fallback: false
