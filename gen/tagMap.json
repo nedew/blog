@@ -49,5 +49,31 @@
       "title": "Test MDX Document No.3",
       "date": "2020-10-04-22-19"
     }
+  ],
+  "test": [
+    {
+      "slug": "89546",
+      "title": "Test MDX Document No.2",
+      "date": "2020-10-03-15-38"
+    },
+    {
+      "slug": "13857",
+      "title": "Test MDX Document No.3",
+      "date": "2020-10-04-22-19"
+    }
+  ],
+  "discordjs": [
+    {
+      "slug": "89546",
+      "title": "Test MDX Document No.2",
+      "date": "2020-10-03-15-38"
+    }
+  ],
+  "programming": [
+    {
+      "slug": "13857",
+      "title": "Test MDX Document No.3",
+      "date": "2020-10-04-22-19"
+    }
   ]
 }

@@ -38,7 +38,7 @@ async function genArticleList() {
   return articleList
 }
 
-// Generate Tag map (tagMap.json)
+// Generate TagMap (tagMap.json)
 function genTagMap(articles) {
   const tagMap = {}
 
@@ -53,6 +53,8 @@ function genTagMap(articles) {
     }
 
     tags.forEach(tag => {
+      // tag = tag.replace('.', '-').toLowerCase()
+
       if (!(tag in tagMap)) {
         tagMap[tag] = []
       }

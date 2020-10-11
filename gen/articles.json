@@ -21,7 +21,9 @@
       "tags": [
         "dev",
         "nextjs",
-        "react"
+        "react",
+        "test",
+        "discordjs"
       ]
     }
   },
@@ -34,7 +36,9 @@
       "tags": [
         "dev",
         "nextjs",
-        "react"
+        "react",
+        "test",
+        "programming"
       ]
     }
   }
