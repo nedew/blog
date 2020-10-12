@@ -1,0 +1,26 @@
+.articleTags {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #4285F4;
+  padding: 0.3rem 0.8rem;
+  // margin: 0 0.7rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+}
+// .tag:nth-child(n + 2) {
+
+// }
+.tag:hover {
+  // background-color: #f6f6f6;
+  background-color: #e9e9e9;
+  text-decoration: none;
+}

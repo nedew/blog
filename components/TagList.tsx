@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from './taglist.module.scss'
 
 export default function TagList(props: {
   tags: string[]

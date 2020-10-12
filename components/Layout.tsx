@@ -17,9 +17,11 @@ export default function Layout({
           content="My Blog"
         />
       </Head>
+      <div className={styles.content}>
       <Header />
-      <main className={styles.container}>{children}</main>
+      <main className={styles.main}>{children}</main>
       <Footer />
+      </div>
     </>
   )
 }

@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 2.3rem 0;
+  box-shadow: 0 2.2px 4px 0 rgba(0,0,0,0.1);
+}
+
+.headerContainer {
+  max-width: 46rem;
+  margin: auto;
+}
+
+.siteTitle {
+  font-family: 'Orbitron', sans-serif;
+  color: #0E0E0E;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 0.7rem;
+}
+.siteTitle:hover {
+  text-decoration: none;
+}

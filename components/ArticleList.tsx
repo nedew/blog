@@ -14,7 +14,7 @@ export default function ArticleList(props: {
         return (
           <div key={index}>
             <Link href={`/articles/${a.slug}`}>
-              <a><h3>{a.title}</h3></a>
+              <a>{a.title}</a>
             </Link>
             <div>Date: {formatDate(a.date)}</div>
           </div>
