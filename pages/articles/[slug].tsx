@@ -3,7 +3,6 @@ import Layout from '../../components/Layout'
 import Article from '../../components/Article'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-// import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import articleIds from '../../gen/articleIds.json'
 

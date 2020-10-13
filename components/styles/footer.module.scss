@@ -10,12 +10,16 @@
 }
 
 .footerContainer {
-  max-width: 46rem;
+  max-width: 740px;
+  box-sizing: border-box;
+  padding-right: 1.3rem;
+  padding-left: 1.3rem;
   margin: auto;
 }
 
 .copyright {
-  margin: 0.7rem;
+  // margin: 0.7rem;
+  text-align: center;
 }
 
 .me {

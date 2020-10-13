@@ -1,6 +1,6 @@
 import { formatDate } from '../lib/format'
 import ArticlePageTag from './ArticlePageTag'
-import styles from './article.module.scss'
+import styles from './styles/article.module.scss'
 
 export default function Article(props: {
   children: React.ReactNode

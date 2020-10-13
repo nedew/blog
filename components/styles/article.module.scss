@@ -1,0 +1,37 @@
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  word-break: break-word;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 700px;
+}
+
+.date {
+  // font-family: 'Audiowide', sans-serif;
+  font-family: 'Mitr', sans-serif;
+  // font-family: 'Varela Round', sans-serif;
+  font-size: 16px;
+}
+
+.article {
+  font-size: 17px;
+  line-height: 2rem;
+  // font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+  color: #262626;
+
+  p code {
+    background-color: #f4f4f4;
+    color: #4c4c4c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+  }
+}

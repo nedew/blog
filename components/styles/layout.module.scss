@@ -1,0 +1,17 @@
+.main {
+  box-sizing: border-box;
+  max-width: 740px;
+  width: 100%;
+  // padding: 0 1rem;
+  padding-top: 3rem;
+  padding-right: 1.3rem;
+  padding-left: 1.3rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

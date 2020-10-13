@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './tag.module.scss'
+import styles from './styles/tag.module.scss'
 
 export default function Tag(props: {
   tags: string[]
