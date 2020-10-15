@@ -17,10 +17,10 @@ export default function Layout({
           content="My Blog"
         />
       </Head>
-      <div className={styles.content}>
-      <Header />
-      <main className={styles.main}>{children}</main>
-      <Footer />
+      <div className={styles.area}>
+        <Header />
+        <main className={styles.main}>{children}</main>
+        <Footer />
       </div>
     </>
   )

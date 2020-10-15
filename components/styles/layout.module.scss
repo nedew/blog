@@ -1,16 +1,20 @@
 .main {
+  background-color: #fff;
   box-sizing: border-box;
   max-width: 740px;
   width: 100%;
   // padding: 0 1rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-right: 1.3rem;
   padding-left: 1.3rem;
   padding-bottom: 3rem;
   margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
 }
 
-.content {
+.area {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

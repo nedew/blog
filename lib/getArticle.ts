@@ -6,7 +6,7 @@ import articles from '../gen/articles.json'
 // const articlesDir = path.join(process.cwd(), 'articles')
 
 export function getLatestArticles() {
-  const max = 2
+  const max = 10
 
   const items = articles.map(article => {
     return {
