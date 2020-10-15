@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from './styles/articleList.module.scss'
 import { formatDate } from '../lib/format'
 
 export default function ArticleList(props: {
@@ -12,11 +13,11 @@ export default function ArticleList(props: {
     <>
       {props.articles.map((a, index) => {
         return (
-          <div key={index}>
+          <div className={styles.item} key={index}>
             <Link href={`/articles/${a.slug}`}>
-              <a>{a.title}</a>
+              <a className={styles.title}>{a.title}</a>
             </Link>
-            <div>Date: {formatDate(a.date)}</div>
+            <div className={styles.date}>{formatDate(a.date)}</div>
           </div>
         )
       })}

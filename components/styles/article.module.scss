@@ -21,7 +21,7 @@
   // font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
   color: #262626;
 
-  p code {
+  > p > code {
     background-color: #f4f4f4;
     color: #4c4c4c;
     padding: 0.2rem 0.5rem;
@@ -30,7 +30,13 @@
     margin-left: 0.3rem;
   }
 
-  h1, h2, h3, h4, h5 {
+  > pre {
+    box-sizing: content-box;
+    border-radius: 5px;
+    max-width: 800px;
+  }
+
+  > h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
   }

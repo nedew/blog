@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mapbox/rehype-prism": "^0.5.0",
     "@next/mdx": "^9.5.2",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "next": "9.4.4",
+    "prismjs": "^1.22.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10",

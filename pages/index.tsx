@@ -15,10 +15,9 @@ export default ({ tags, latestArticles }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>最新記事</h1>
+        <h1>LATEST</h1>
         <ArticleList articles={latestArticles} />
-        <h1>タグ一覧</h1>
-        <TagList tags={tags}/>
+        {/* <TagList tags={tags}/> */}
       </Layout>
     </>
   )

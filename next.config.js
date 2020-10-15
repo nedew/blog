@@ -1,4 +1,5 @@
 const path = require("path")
+const rehypePrism = require('@mapbox/rehype-prism')
 
 module.exports = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
@@ -8,7 +9,13 @@ module.exports = {
       test: /\.mdx?$/,
       use: [
         options.defaultLoaders.babel,
-        '@mdx-js/loader',
+        // '@mdx-js/loader',
+        {
+          loader: '@mdx-js/loader',
+          options: {
+            rehypePlugins: [rehypePrism]
+          }
+        },
         path.join(__dirname, "./lib/fm-loader"),
       ],
     })
