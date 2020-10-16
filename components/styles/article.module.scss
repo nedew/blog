@@ -13,6 +13,9 @@
   font-family: 'Mitr', sans-serif;
   // font-family: 'Varela Round', sans-serif;
   font-size: 16px;
+  color: #727272;
+  font-family: sans-serif, 'Mitr';
+  font-weight: 600;
 }
 
 .article {
@@ -31,9 +34,7 @@
   }
 
   > pre {
-    box-sizing: content-box;
     border-radius: 5px;
-    max-width: 800px;
   }
 
   > h1, h2, h3, h4, h5 {

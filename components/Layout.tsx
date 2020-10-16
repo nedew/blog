@@ -19,7 +19,11 @@ export default function Layout({
       </Head>
       <div className={styles.area}>
         <Header />
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          <div className={styles.contents}>
+            {children}
+          </div>
+        </main>
         <Footer />
       </div>
     </>

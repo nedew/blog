@@ -22,6 +22,7 @@ export default (props: Props) => {
     <>
       <Head>
         <title>{props.title}</title>
+        <link href='../../styles/prism.css' rel='stylesheet' />
       </Head>
       <Layout>
         <Article

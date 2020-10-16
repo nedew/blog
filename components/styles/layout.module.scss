@@ -1,18 +1,46 @@
+@import "../../styles/_config.scss";
+
 .main {
   background-color: #fff;
   box-sizing: border-box;
-  max-width: 740px;
+  max-width: $maxWidth;
   width: 100%;
-  // padding: 0 1rem;
-  padding-top: 2rem;
-  padding-right: 1.3rem;
-  padding-left: 1.3rem;
-  padding-bottom: 3rem;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
+
+  padding-top: $widePaddingTop;
+  padding-right: $widePaddingRight;
+  padding-left: $widePaddingLeft;
+  padding-bottom: $widePaddingBottom;
+
+  @media screen and (max-width: $breakPoint) {
+    padding-top: $narrowPaddingTop;
+    padding-right: $narrowPaddingRight;
+    padding-left: $narrowPaddingLeft;
+    padding-bottom: $narrowPaddingBottom;
+  }
+
+  @media screen and (max-width: $maxWidth) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    z-index: -1;
+  }
 }
+
+// .contents {
+//   // background-color: #fff;
+//   // padding: 1rem;
+//   width: 100%;
+//   max-width: $maxWidth;
+//   // padding-top: 2rem;
+//   // padding-right: 1.3rem;
+//   // padding-left: 1.3rem;
+//   // padding-bottom: 3rem;
+  
+// }
 
 .area {
   display: flex;

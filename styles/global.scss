@@ -1,3 +1,5 @@
+@import "./_config.scss";
+
 html,
 body {
   padding: 0;
@@ -14,7 +16,12 @@ body {
   font-kerning: normal;
   letter-spacing: 0.03rem;
   -webkit-font-smoothing: antialiased;
-  background-color: #f8f8f8;
+  // background-color: #f8f8f8;
+  background-color: #f3f3f3;
+
+  @media screen and (max-width: $maxWidth) {
+    background-color: #fff;
+  }
 }
 
 

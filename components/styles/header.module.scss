@@ -1,3 +1,5 @@
+@import "../../styles/_config.scss";
+
 .header {
   width: 100%;
   background-color: #fcfcfc;
@@ -6,11 +8,20 @@
 }
 
 .headerContainer {
-  max-width: 740px;
-  box-sizing: border-box;
-  padding-right: 1.3rem;
-  padding-left: 1.3rem;
-  margin: auto;
+  max-width: $maxWidth;
+  width: 100%;
+  box-sizing: border-box;;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-right: $widePaddingRight;
+  padding-left: $widePaddingLeft;
+
+  @media screen and (max-width: $breakPoint) {
+    padding-right: $narrowPaddingRight;
+    padding-left: $narrowPaddingLeft;
+  }
+
 }
 
 .siteTitle {
@@ -19,6 +30,6 @@
   text-decoration: none;
   font-size: 30px;
 }
-.siteTitle:hover {
-  text-decoration: none;
-}
+// .siteTitle:hover {
+//   text-decoration: none;
+// }

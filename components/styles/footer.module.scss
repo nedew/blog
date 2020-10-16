@@ -1,3 +1,5 @@
+@import "../../styles/_config.scss";
+
 .footer {
   font-family: sans-serif;
   width: 100%;
@@ -6,15 +8,20 @@
   padding: 1.5rem 0;
   margin-top: auto;
   border-top: 1px solid #ededed;
-  // min-height: 5rem;
 }
 
 .footerContainer {
-  max-width: 740px;
+  max-width: $maxWidth;
   box-sizing: border-box;
-  padding-right: 1.3rem;
-  padding-left: 1.3rem;
   margin: auto;
+
+  padding-right: $widePaddingRight;
+  padding-left: $widePaddingLeft;
+
+  @media screen and (max-width: $breakPoint) {
+    padding-right: $narrowPaddingRight;
+    padding-left: $narrowPaddingLeft;
+  }
 }
 
 .copyright {
