@@ -20,7 +20,7 @@ body {
   background-color: #f3f3f3;
 
   @media screen and (max-width: $maxWidth) {
-    // background-color: #fff;
+    background-color: #fff;
     background-color: red;
   }
 }

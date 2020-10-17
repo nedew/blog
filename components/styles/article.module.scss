@@ -45,9 +45,8 @@
     padding: 1rem 2.5rem;
     margin-right: $wideCodeMarginRight;
     margin-left: $wideCodeMarginLeft;
-    @media screen and (max-width: $maxWidth) {
+    @media screen and (max-width: $breakPoint) {
       width: 100%;
-      padding: 1rem 1.5rem;
       padding: 1rem $narrowPaddingRight;
       margin-right: $narrowCodeMarginRight;
       margin-left: $narrowCodeMarginLeft;
