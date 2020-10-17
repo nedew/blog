@@ -1,3 +1,5 @@
+@import "../../styles/_config.scss";
+
 .title {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -34,7 +36,22 @@
   }
 
   > pre {
-    border-radius: 5px;
+    // border-radius: 5px;
+    border-radius: 0;
+    width: 100%;
+    // margin: 0 calc(50% - 100%);
+    // width: 100%;
+    overflow-x: auto;
+    padding: 1rem 2.5rem;
+    margin-right: $wideCodeMarginRight;
+    margin-left: $wideCodeMarginLeft;
+    @media screen and (max-width: $maxWidth) {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      padding: 1rem $narrowPaddingRight;
+      margin-right: $narrowCodeMarginRight;
+      margin-left: $narrowCodeMarginLeft;
+    }
   }
 
   > h1, h2, h3, h4, h5 {

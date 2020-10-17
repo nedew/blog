@@ -21,6 +21,8 @@
     padding-right: $narrowPaddingRight;
     padding-left: $narrowPaddingLeft;
     padding-bottom: $narrowPaddingBottom;
+
+    border-radius: 0px;
   }
 
   @media screen and (max-width: $maxWidth) {
