@@ -1,11 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import articleIds from '../gen/articleIds.json'
 import articles from '../gen/articles.json'
 
-// const articlesDir = path.join(process.cwd(), 'articles')
-
-export function getArticles(limit?: number) {
+export function getSortedArticles(limit?: number) {
 
   const items = articles.map(article => {
     return {
@@ -26,6 +21,6 @@ export function getArticles(limit?: number) {
   if (limit) {
     return items.slice(0, limit)
   }
-  
+
   return items
 }

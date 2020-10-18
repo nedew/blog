@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
 import ArticleList from '../components/ArticleList'
 import utilStyles from '../components/styles/util.module.scss'
-import { getArticles } from '../lib/getArticle'
+import { getSortedArticles } from '../lib/getArticle'
 import tagMap from '../gen/tagMap.json'
 import { siteName } from '../config/blog.config.json'
 
@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       tags: Object.keys(tagMap),
-      latestArticles: getArticles(10)
+      latestArticles: getSortedArticles(10)
     }
   }
 }
