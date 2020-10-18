@@ -7,7 +7,12 @@ import tagMap from '../../gen/tagMap.json'
 import { siteName } from '../../config/blog.config.json'
 
 // /tags page
-export default ({ tags }: { tags: string[] }) => {
+export default ({ tags }: {
+  tags: {
+    name: string
+    number: string
+  }[]
+}) => {
   return (
     <>
       <Head>
@@ -24,7 +29,9 @@ export default ({ tags }: { tags: string[] }) => {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      tags: Object.keys(tagMap),
+      tags: Object.keys(tagMap).map((tag) => {
+        return { name: tag, number: String(tagMap[tag].length) }
+      }),
     }
   }
 }
