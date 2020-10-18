@@ -23,7 +23,7 @@ export default (props: Props) => {
     <>
       <Head>
         <title>{props.title} | {siteName}</title>
-        <link href='../../styles/prism.css' rel='stylesheet' />
+        <link rel="stylesheet" href='/css/prism.css' />
       </Head>
       <Layout>
         <Article
