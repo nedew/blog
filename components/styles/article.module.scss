@@ -12,19 +12,15 @@
 }
 
 .date {
-  // font-family: 'Audiowide', sans-serif;
-  // font-family: 'Mitr', sans-serif;
-  // font-family: 'Varela Round', sans-serif;
   font-size: 16px;
   color: #727272;
-  font-family: sans-serif, 'Mitr';
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
   font-weight: 600;
 }
 
 .article {
   font-size: 16px;
   line-height: 2rem;
-  // font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
   color: #262626;
 
   > p > code {
