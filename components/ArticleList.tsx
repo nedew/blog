@@ -20,7 +20,6 @@ export default function ArticleList(props: {
             <Link href={`/articles/${a.slug}`}>
               <a className={styles.title}>{a.title}</a>
             </Link>
-            {/* <div className={styles.date}>{formatDate(a.date)}</div> */}
           </div>
         )
       })}
