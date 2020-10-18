@@ -1,6 +1,5 @@
 // import Link from 'next/link'
 import styles from './styles/footer.module.scss'
-import config from '../config/blog.json'
 
 
 export default function Footer() {
