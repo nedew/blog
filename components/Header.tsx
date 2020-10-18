@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styles from './styles/header.module.scss'
-import blogConfig from '../config/blog.json'
+import blogConfig from '../config/blog.config.json'
 
 export default function Header() {
   return (

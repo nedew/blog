@@ -5,7 +5,7 @@
   z-index: 0;
   width: 100%;
   background-color: #fcfcfc;
-  padding: 1.9rem 0;
+  padding: 1.5rem 0;
   box-shadow: 0 2.2px 4px 0 rgba(0,0,0,0.1);
 }
 
@@ -27,11 +27,19 @@
 }
 
 .siteTitle {
+  display: inline-block;
   font-family: 'Orbitron', Montserrat, sans-serif;
+  // font-family: 'Montserrat Alternates';
+  font-family: 'Righteous';
+  // font-family: 'Bungee';
   color: #0E0E0E;
   text-decoration: none;
   font-size: 30px;
   font-weight: 700;
+}
+.siteTitle:first-letter {
+  color: #f45842;
+  font-size: 40px;
 }
 // .siteTitle:hover {
 //   text-decoration: none;

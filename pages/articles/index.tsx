@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Layout from '../../components/Layout'
 import ArticleList from '../../components/ArticleList'
+import utilStyles from '../../components/styles/util.module.scss'
 import articles from '../../gen/articles.json'
+import { siteName } from '../../config/blog.config.json'
 
 export default () => {
   const items = articles.map(item => {
@@ -15,11 +17,11 @@ export default () => {
   return (
     <>
       <Head>
-        <title>Articles - nedew.dev</title>
+        <title>ARTICLES | {siteName}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>記事一覧</h1>
+        <h1 className={utilStyles.pageTitle}>ARTICLES</h1>
         <ArticleList articles={items} />
       </Layout>
     </>

@@ -1,7 +1,10 @@
 import Layout from '../../components/Layout'
 import ArticleList from '../../components/ArticleList'
+import Head from 'next/head'
+import utilStyles from '../../components/styles/util.module.scss'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import tagMap from '../../gen/tagMap.json'
+import { siteName } from '../../config/blog.config.json'
 
 type Props = {
   tag: string
@@ -15,8 +18,11 @@ type Props = {
 export default (props: Props) => {
   return (
     <>
+      <Head>
+        <title>{props.tag} | {siteName}</title>
+      </Head>
       <Layout>
-        <h2>Tag: {props.tag}</h2>
+        <h1 className={utilStyles.pageTitle}>TAG: {props.tag}</h1>
         <ArticleList articles={props.articles} />
       </Layout>
     </>

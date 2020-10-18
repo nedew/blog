@@ -5,8 +5,7 @@ import articles from '../gen/articles.json'
 
 // const articlesDir = path.join(process.cwd(), 'articles')
 
-export function getLatestArticles() {
-  const max = 10
+export function getArticles(limit?: number) {
 
   const items = articles.map(article => {
     return {
@@ -17,12 +16,16 @@ export function getLatestArticles() {
   })
 
   items.sort((a, b) => {
-    const dateA = +a.date.replace('-', '')
-    const dateB = +b.date.replace('-', '')
-    if (dateA < dateB) return -1
-    if (dateA > dateB) return 1
+    const dateA = +a.date.replace(/-/g, '')
+    const dateB = +b.date.replace(/-/g, '')
+    if (dateA > dateB) return -1
+    if (dateA < dateB) return 1
     return 0
   })
 
-  return items.slice(0, max)
+  if (limit) {
+    return items.slice(0, limit)
+  }
+  
+  return items
 }

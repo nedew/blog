@@ -5,14 +5,16 @@ export default function TagList(props: {
   tags: string[]
 }) {
   return (
-    <>
+    <ul className={styles.tags}>
       {props.tags.map((tag, index) => {
         return (
-          <Link href={`/tags/${tag}`} key={index}>
-            <a><div>{tag}</div></a>
-          </Link>
+          <li className={styles.tag} key={index}>
+            <Link href={`/tags/${tag}`}>
+              <a>{tag}</a>
+            </Link>
+          </li>
         )
       })}
-    </>
+    </ul>
   )
 }

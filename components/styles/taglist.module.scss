@@ -1,0 +1,21 @@
+.tags {
+  padding-left: 1.7rem;
+  line-height: 2.3rem;
+}
+
+.tag {
+  color: #0c53c8;
+  font-size: 18px;
+  // letter-spacing: 0.08rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+}
+.tag:visited {
+  color: #0c53c8;
+}
+.tag::marker {
+  color: black;
+}
+.tag > a {
+  color: #0c53c8;
+  text-decoration: none;
+}

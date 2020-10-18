@@ -5,6 +5,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import articleIds from '../../gen/articleIds.json'
+import { siteName } from '../../config/blog.config.json'
 
 // const articleDir = path.join(process.cwd(), 'articles')
 type Props = {
@@ -21,7 +22,7 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        <title>{props.title}</title>
+        <title>{props.title} | {siteName}</title>
         <link href='../../styles/prism.css' rel='stylesheet' />
       </Head>
       <Layout>
