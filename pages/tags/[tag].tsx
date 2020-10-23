@@ -3,6 +3,7 @@ import ArticleList from '../../components/ArticleList'
 import Head from 'next/head'
 import utilStyles from '../../components/styles/util.module.scss'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { getSortedArticles } from '../../lib/getArticle'
 import tagMap from '../../gen/tagMap.json'
 import { siteName } from '../../config/blog.config.json'
 
@@ -46,7 +47,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       tag: tag,
-      articles: tagMap[tag],
+      articles: getSortedArticles(),
     }
   }
 }

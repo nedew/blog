@@ -17,6 +17,7 @@
   padding-left: $widePaddingLeft;
   padding-bottom: $widePaddingBottom;
 
+  // Mobile
   @media screen and (max-width: $breakPoint) {
     padding-top: $narrowPaddingTop;
     padding-right: $narrowPaddingRight;
@@ -29,8 +30,9 @@
   @media screen and (max-width: $maxWidth) {
     margin-top: 0px;
     margin-bottom: 0px;
-    z-index: -1;
+    // z-index: -1;
     border-radius: inherit;
+    box-shadow: inherit;
   }
 }
 
@@ -46,8 +48,8 @@
   
 // }
 
-// .area {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-// }
+.area {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
