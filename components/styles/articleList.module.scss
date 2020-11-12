@@ -1,3 +1,5 @@
+@import '../../styles/config';
+
 .spacer {
   width: 0;
   height: 0;
@@ -5,12 +7,15 @@
 }
 
 .item {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   width: 100%;
 }
 
 .title {
-  color: #0c53c8;
+  // color: #0c53c8;
+  // color: #4285F4;
+  // color: #1171ac;
+  color: $defaultLinkColor;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
@@ -22,5 +27,5 @@
   color: #727272;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  // margin-bottom: 0.2rem;
 }

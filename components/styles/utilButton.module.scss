@@ -1,0 +1,13 @@
+@import '../../styles/config';
+
+.wrapper {
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+.button {
+  // color: #4285F4;
+  color: $defaultLinkColor;
+  text-align: center;
+  text-decoration: none;
+}

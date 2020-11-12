@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import Layout from '../components/Layout'
 import ArticleList from '../components/ArticleList'
+import UtilButton from '../components/UtilButton'
 import utilStyles from '../components/styles/util.module.scss'
 import { getSortedArticles } from '../lib/getArticle'
 import tagMap from '../gen/tagMap.json'
@@ -18,6 +19,7 @@ export default ({ tags, latestArticles }) => {
       <Layout>
         <h1 className={utilStyles.pageTitle}>LATEST</h1>
         <ArticleList articles={latestArticles} />
+        <UtilButton path='/articles'>MORE</UtilButton>
       </Layout>
     </>
   )
