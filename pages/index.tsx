@@ -6,9 +6,15 @@ import UtilButton from '../components/UtilButton'
 import utilStyles from '../components/styles/util.module.scss'
 import { getSortedArticles } from '../lib/getArticle'
 import tagMap from '../gen/tagMap.json'
-import { siteName } from '../config/blog.config.json'
+import { siteName, getLatestNumber } from '../config/blog.config.json'
 
-export default ({ tags, latestArticles }) => {
+export default ({ latestArticles }: {
+  latestArticles: {
+    slug: string
+    title: string
+    date: string
+  }[]
+}) => {
 
   return (
     <>
@@ -19,18 +25,19 @@ export default ({ tags, latestArticles }) => {
       <Layout>
         <h1 className={utilStyles.pageTitle}>LATEST</h1>
         <ArticleList articles={latestArticles} />
-        <UtilButton path='/articles'>MORE</UtilButton>
+        {latestArticles.length >= getLatestNumber && (
+          <UtilButton path='/articles'>MORE</UtilButton>
+        )}
       </Layout>
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  
   return {
     props: {
       tags: Object.keys(tagMap),
-      latestArticles: getSortedArticles(10)
+      latestArticles: getSortedArticles(getLatestNumber)
     }
   }
 }
