@@ -16,14 +16,18 @@
   // color: #4285F4;
   // color: #1171ac;
   color: $defaultLinkColor;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
 }
+.title:hover {
+  opacity: 0.7;
+}
 
 .date {
+  font-size: 14px;
   color: #727272;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
   font-weight: 600;
