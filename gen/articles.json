@@ -3,7 +3,7 @@
     "slug": "62426",
     "fileName": "202008271034_62426_develop-test-1.mdx",
     "fm": {
-      "title": "これはテストのタイトルReact_Next.jsです",
+      "title": "これはテストのタイトルReact_Next.jsです - 1",
       "date": "2020-10-02-04-19",
       "tags": [
         "dev",
@@ -16,7 +16,7 @@
     "slug": "89546",
     "fileName": "202008301100_89546_develop-test-2.mdx",
     "fm": {
-      "title": "Test MDX Document No.2",
+      "title": "ランダム文字列を生成して、テスト記事の本文として記載したもの - 2",
       "date": "2020-10-03-15-38",
       "tags": [
         "dev",
@@ -31,7 +31,7 @@
     "slug": "13857",
     "fileName": "202009120358_13857_develop-test-3.mdx",
     "fm": {
-      "title": "Test MDX Document No.3",
+      "title": "本文無しのテスト記事だよ - 3",
       "date": "2020-10-04-22-19",
       "tags": [
         "dev",

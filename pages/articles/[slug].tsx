@@ -10,7 +10,7 @@ import { siteName } from '../../config/blog.config.json'
 // const articleDir = path.join(process.cwd(), 'articles')
 type Props = {
   fileName: string
-  articleId: string
+  slug: string
   title: string
   date: string
   tags: string[]
@@ -27,6 +27,7 @@ export default (props: Props) => {
       </Head>
       <Layout>
         <Article
+          slug={props.slug}
           title={props.title}
           date={props.date}
           tags={props.tags}
@@ -60,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       fileName,
-      articleId: slug,
+      slug,
       ...frontMatter
     }
   }

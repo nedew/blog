@@ -1,16 +1,16 @@
 import canvas from 'canvas'
 import fs from 'fs'
 import path from 'path'
+// import articles from '../gen/articles.json'
 
-export function getLines(title, ctx) {
-  const TEXT_WIDTH = 900 // test
+function getLines(title, maxWidth, ctx) {
   let lines = []
   let currentLine = []
   let tokens = Array.from(title)
   let token
   while ((token = tokens.shift())) {
     const lineText = [...currentLine, token].join('')
-    if (ctx.measureText(lineText + token).width > TEXT_WIDTH) {
+    if (ctx.measureText(lineText + token).width > maxWidth) {
       lines.push(currentLine.slice())
       currentLine = [token]
     } else {
@@ -24,37 +24,59 @@ export function getLines(title, ctx) {
   return lines
 }
 
-export function generateOgpImg(title, slug) {
-  // const OUTPUT_PATH = '../gen/ogp/'
-
+function generateOgpImg(slug, title) {
   const WIDTH = 1200
   const HEIGHT = 630
-  const LINE_HEIGHT = 60
+  const FONT_SIZE = 50
   const FONT_FAMILY = '"Noto Sans CJK JP"'
   const FONT_TYPE = 'bold'
-  const TEXT_WIDTH = 800
-  // const LINE_HEIGHT = 100
-  // const FONT_COLOR = '#262626'
-  const FONT_COLOR = 'white'
+  const TEXT_WIDTH = 900
+  const FONT_COLOR = '#474747'
+  const TEXT_MARGIN = 15
+  const MAX_LINE = 4
+  const BACKGROUND_COLOR = 'white'
 
   const canv = canvas.createCanvas(WIDTH, HEIGHT)
   const ctx = canv.getContext('2d')
 
-  ctx.font = FONT_TYPE + ' ' + LINE_HEIGHT + 'px ' + FONT_FAMILY
+  // Background color
+  ctx.fillStyle = BACKGROUND_COLOR
+  ctx.fillRect(0, 0, WIDTH, HEIGHT)
+
+  ctx.font = FONT_TYPE + ' ' + FONT_SIZE + 'px ' + FONT_FAMILY
   ctx.fillStyle = FONT_COLOR
 
   // const titleLines = getLines('Next.js, MDX, Typescriptで自分専用のブログシステムを作った（これは穴埋めようのテキストです）', ctx)
-  const titleLines = getLines('Overwatch のプレイヤーデータを返す Discord Bot を作って公開してみた。（ discord.js , node.js , overwatch ）', ctx)
+  const titleLines = getLines(title, TEXT_WIDTH, ctx)
+  if (titleLines.length > MAX_LINE) {
+    titleLines[MAX_LINE - 1].pop()
+    titleLines[MAX_LINE - 1].push('…')
+    titleLines.splice(MAX_LINE, titleLines.length)
+  }
   for (let i = 0; i < titleLines.length; i++) {
+    console.log(i + ' - ' + titleLines[i])
     const text = titleLines[i].join('')
-    ctx.fillText(text, (WIDTH - ctx.measureText(text).width) / 2, LINE_HEIGHT + (LINE_HEIGHT * i) + (5 * i))
+    const lineX = (WIDTH - ctx.measureText(text).width)/2
+    const lineY = HEIGHT / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
+    ctx.fillText(text, lineX, lineY)
   }
 
-  // const textWidth = ctx.measureText(title).width
-  // ctx.fillText(title, (WIDTH - textWidth) / 2, LINE_HEIGHT)
   const buf = canv.toBuffer()
-
-  fs.writeFileSync(path.join(process.cwd(), `gen/ogp/${slug}.png`), buf)
+  fs.writeFileSync(path.join(process.cwd(), `public/ogp/${slug}.png`), buf)
 }
 
-generateOgpImg('Next.js, MDXで自分用のブログを作成した', '5428374823')
+function main() {
+  const filePath = path.join(process.cwd(), 'gen/articles.json')
+  const articles = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+  for (const a of articles) {
+    const slug = a.slug
+    const title = a.fm.title
+    if (fs.existsSync(path.join(process.cwd(), `public/ogp/${slug}.png`))) {
+      continue
+    }
+    generateOgpImg(slug, title)
+  }
+}
+
+// run
+main()

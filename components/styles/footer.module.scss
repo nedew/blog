@@ -7,6 +7,9 @@
   padding: 1.5rem 0;
   border-top: 1px solid #ededed;
   margin-top: auto;
+  @media screen and (max-width: $breakPoint) {
+    padding: 1rem 0;
+  }
 }
 
 .footerContainer {

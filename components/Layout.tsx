@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
+import { siteName } from '../config/blog.config.json'
 import styles from './styles/layout.module.scss'
 
 export default function Layout({
@@ -16,6 +17,9 @@ export default function Layout({
           name="description"
           content="My Blog"
         />
+        <meta property="og:site_title" content={siteName} />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className={styles.area}>
         <Header />
