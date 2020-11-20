@@ -27,7 +27,7 @@ function getLines(title, maxWidth, ctx) {
 function generateOgpImg(slug, title) {
   const WIDTH = 1200
   const HEIGHT = 630
-  const FONT_SIZE = 50
+  const FONT_SIZE = 55
   const FONT_FAMILY = '"Noto Sans CJK JP"'
   const FONT_TYPE = 'bold'
   const TEXT_WIDTH = 900
