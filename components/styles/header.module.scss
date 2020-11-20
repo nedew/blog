@@ -8,6 +8,9 @@
   background-color: #AA4444;
   padding: 0.7rem 0;
   box-shadow: 0 2.2px 4px 0 rgba(0,0,0,0.1);
+  @media screen and (max-width: $breakPoint) {
+    padding: 0.3rem 0;
+  }
 }
 
 .headerContainer {
@@ -41,9 +44,11 @@
   font-size: 30px;
   font-weight: 700;
   user-select: none;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 25px;
+  }
 }
 .siteTitle:first-letter {
   color: #f45842;
   color: #fcfcfc;
-  font-size: 30px;
 }
