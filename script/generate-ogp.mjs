@@ -20,7 +20,7 @@ function getLines(title, maxWidth, ctx) {
   if (currentLine.length) {
     lines.push(currentLine)
   }
-  console.log(lines)
+  // console.log(lines)
   return lines
 }
 
@@ -54,7 +54,7 @@ function generateOgpImg(slug, title) {
     titleLines.splice(MAX_LINE, titleLines.length)
   }
   for (let i = 0; i < titleLines.length; i++) {
-    console.log(i + ' - ' + titleLines[i])
+    // console.log(i + ' - ' + titleLines[i])
     const text = titleLines[i].join('')
     const lineX = (WIDTH - ctx.measureText(text).width)/2
     const lineY = HEIGHT / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
