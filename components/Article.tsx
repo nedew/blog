@@ -19,6 +19,7 @@ export default function Article(props: {
         <meta property="og:title" content={props.title} />
         <meta property="og:url" content={`${siteUrl}articles/${props.slug}`} />
         <meta property="og:image" content={`${siteUrl}ogp/${props.slug}.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className={styles.date}>{formatDate(props.date)}</div>
       <h1 className={styles.title}>{props.title}</h1>
