@@ -1,15 +1,15 @@
 @import "../../styles/_config.scss";
 
 .main {
-  background-color: #fff;
+  // background-color: $bgColorMain;
   box-sizing: border-box;
-  box-shadow: 0 0.7px 4px 0 rgba(0, 0, 0, 0.05);
+  // box-shadow: 0 0.7px 4px 0 rgba(0, 0, 0, 0.05);
   max-width: $maxWidth;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: $wideMarginTop;
+  margin-bottom: $wideMarginButtom;
   // border-radius: 23px;
   border-radius: 1px;
 
