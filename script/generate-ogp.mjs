@@ -39,7 +39,7 @@ async function generateOgpImg(slug, title) {
   const FONT_COLOR = '#262626'
   const TEXT_MARGIN = 20
   const MAX_LINE = 4
-  const BACKGROUND_IMG_PATH = path.join(process.cwd(), 'img/ogp_bg/ogp_bg_6.png')
+  const BACKGROUND_IMG_PATH = path.join(process.cwd(), 'img/ogp_bg/ogp_bg_8.png')
 
   const canv = canvas.createCanvas(WIDTH, HEIGHT)
   const ctx = canv.getContext('2d')
