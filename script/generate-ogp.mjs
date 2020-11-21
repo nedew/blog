@@ -1,7 +1,12 @@
 import canvas from 'canvas'
 import fs from 'fs'
 import path from 'path'
-// import articles from '../gen/articles.json'
+
+const logColors = {
+  white: '\u001b[37m',
+  cyan: '\u001b[36m',
+  reset: '\u001b[0m',
+}
 
 function getLines(title, maxWidth, ctx) {
   let lines = []
@@ -24,24 +29,24 @@ function getLines(title, maxWidth, ctx) {
   return lines
 }
 
-function generateOgpImg(slug, title) {
+async function generateOgpImg(slug, title) {
   const WIDTH = 1200
   const HEIGHT = 630
-  const FONT_SIZE = 55
+  const FONT_SIZE = 60
   const FONT_FAMILY = '"Noto Sans CJK JP"'
   const FONT_TYPE = 'bold'
-  const TEXT_WIDTH = 900
-  const FONT_COLOR = '#474747'
-  const TEXT_MARGIN = 15
+  const TEXT_WIDTH = 950
+  const FONT_COLOR = '#262626'
+  const TEXT_MARGIN = 20
   const MAX_LINE = 4
-  const BACKGROUND_COLOR = 'white'
+  const BACKGROUND_IMG_PATH = path.join(process.cwd(), 'img/ogp_bg/ogp_bg_4.png')
 
   const canv = canvas.createCanvas(WIDTH, HEIGHT)
   const ctx = canv.getContext('2d')
 
-  // Background color
-  ctx.fillStyle = BACKGROUND_COLOR
-  ctx.fillRect(0, 0, WIDTH, HEIGHT)
+  // Background image
+  const bgImage = await canvas.loadImage(BACKGROUND_IMG_PATH)
+  ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT)
 
   ctx.font = FONT_TYPE + ' ' + FONT_SIZE + 'px ' + FONT_FAMILY
   ctx.fillStyle = FONT_COLOR
@@ -57,7 +62,9 @@ function generateOgpImg(slug, title) {
     // console.log(i + ' - ' + titleLines[i])
     const text = titleLines[i].join('')
     const lineX = (WIDTH - ctx.measureText(text).width)/2
-    const lineY = HEIGHT / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
+    // const lineY = HEIGHT / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
+    // const lineY = (HEIGHT + 150) / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
+    const lineY = (HEIGHT + 50) / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
     ctx.fillText(text, lineX, lineY)
   }
 
@@ -76,6 +83,7 @@ function main() {
     }
     generateOgpImg(slug, title)
   }
+  console.log(logColors.cyan + '[script:ogpbuild]' + logColors.white + ' Successful!' + logColors.reset)
 }
 
 // run
