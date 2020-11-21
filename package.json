@@ -6,7 +6,7 @@
     "dev": "node script/generate-json.mjs && next dev",
     "build": "node script/generate-json.mjs && next build",
     "start": "next start",
-    "buildogp": "node script/generate-ogp.mjs"
+    "buildogp": "node script/generate-json.mjs && node script/generate-ogp.mjs"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",

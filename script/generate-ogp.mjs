@@ -39,7 +39,7 @@ async function generateOgpImg(slug, title) {
   const FONT_COLOR = '#262626'
   const TEXT_MARGIN = 20
   const MAX_LINE = 4
-  const BACKGROUND_IMG_PATH = path.join(process.cwd(), 'img/ogp_bg/ogp_bg_4.png')
+  const BACKGROUND_IMG_PATH = path.join(process.cwd(), 'img/ogp_bg/ogp_bg_5.png')
 
   const canv = canvas.createCanvas(WIDTH, HEIGHT)
   const ctx = canv.getContext('2d')
@@ -64,7 +64,7 @@ async function generateOgpImg(slug, title) {
     const lineX = (WIDTH - ctx.measureText(text).width)/2
     // const lineY = HEIGHT / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
     // const lineY = (HEIGHT + 150) / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
-    const lineY = (HEIGHT + 50) / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
+    const lineY = (HEIGHT + 0) / 2 - FONT_SIZE * (titleLines.length + 1) / 2 + (FONT_SIZE + TEXT_MARGIN) * i
     ctx.fillText(text, lineX, lineY)
   }
 
@@ -78,9 +78,9 @@ function main() {
   for (const a of articles) {
     const slug = a.slug
     const title = a.fm.title
-    if (fs.existsSync(path.join(process.cwd(), `public/ogp/${slug}.png`))) {
-      continue
-    }
+    // if (fs.existsSync(path.join(process.cwd(), `public/ogp/${slug}.png`))) {
+    //   continue
+    // }
     generateOgpImg(slug, title)
   }
   console.log(logColors.cyan + '[script:ogpbuild]' + logColors.white + ' Successful!' + logColors.reset)
