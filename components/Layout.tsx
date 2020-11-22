@@ -6,12 +6,16 @@ import styles from './styles/layout.module.scss'
 
 export default function Layout({
   children,
-  title
+  title,
+  overwriteOgp = false
 }: {
   children: React.ReactNode
   title?: string
+  overwriteOgp?: boolean
 }) {
-  const pageTitle = title !== undefined ? title + ' | ' + siteName : siteName
+  const pageTitle = title !== undefined
+        ? title + ' | ' + siteName
+        : siteName
 
   return (
     <>
@@ -22,13 +26,17 @@ export default function Layout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta property="og:locale" content="ja_JP" />
-        <meta property="og:site_title" content={siteName} />
-        <meta property="og:title" content={pageTitle} />
-        {/* <meta property="og:description" content="nedew's blog" /> */}
-        <meta property="og:image" content={`${siteUrl}icon-512x512.png`} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        {!overwriteOgp && (
+          <>
+            <meta property="og:locale" content="ja_JP" />
+            <meta property="og:site_title" content={siteName} />
+            <meta property="og:title" content={pageTitle} />
+            {/* <meta property="og:description" content="nedew's blog" /> */}
+            <meta property="og:image" content={`${siteUrl}icon-512x512.png`} />
+            <meta property="og:type" content="website" />
+            <meta name="twitter:card" content="summary" />
+          </>
+        )}
       </Head>
       <div className={styles.area}>
         <Header />

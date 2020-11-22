@@ -5,7 +5,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import articleIds from '../../gen/articleIds.json'
-import { siteName } from '../../config/blog.config.json'
+import { siteUrl } from '../../config/blog.config.json'
 
 // const articleDir = path.join(process.cwd(), 'articles')
 type Props = {
@@ -22,10 +22,16 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        {/* <title>{props.title} | {siteName}</title> */}
         <link rel="stylesheet" href='/css/prism.css' />
+
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:url" content={`${siteUrl}articles/${props.slug}`} />
+        <meta property="og:image" content={`${siteUrl}ogp/${props.slug}.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Layout title={props.title}>
+      <Layout title={props.title} overwriteOgp={true}>
         <Article
           slug={props.slug}
           title={props.title}
