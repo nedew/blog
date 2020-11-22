@@ -19,9 +19,6 @@ type Props = {
 export default (props: Props) => {
   return (
     <>
-      <Head>
-        {/* <title>{props.tag} | {siteName}</title> */}
-      </Head>
       <Layout title={props.tag}>
         <h1 className={utilStyles.pageTitle}>TAG: {props.tag}</h1>
         <ArticleList articles={props.articles} />

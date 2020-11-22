@@ -15,9 +15,6 @@ export default ({ tags }: {
 }) => {
   return (
     <>
-      <Head>
-        {/* <title>TAGS | {siteName}</title> */}
-      </Head>
       <Layout title={'TAGS'}>
         <h1 className={utilStyles.pageTitle}>TAGS</h1>
         <TagList tags={tags} />

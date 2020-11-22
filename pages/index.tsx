@@ -18,10 +18,6 @@ export default ({ latestArticles }: {
 
   return (
     <>
-      <Head>
-        {/* <title>{siteName}</title> */}
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Layout>
         <h1 className={utilStyles.pageTitle}>LATEST</h1>
         <ArticleList articles={latestArticles} />
