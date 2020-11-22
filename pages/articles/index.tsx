@@ -11,10 +11,10 @@ export default () => {
   return (
     <>
       <Head>
-        <title>ARTICLES | {siteName}</title>
+        {/* <title>ARTICLES | {siteName}</title> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout title={'ARTICLES'}>
         <h1 className={utilStyles.pageTitle}>ARTICLES</h1>
         <ArticleList articles={items} />
       </Layout>

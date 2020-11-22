@@ -20,9 +20,9 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        <title>{props.tag} | {siteName}</title>
+        {/* <title>{props.tag} | {siteName}</title> */}
       </Head>
-      <Layout>
+      <Layout title={props.tag}>
         <h1 className={utilStyles.pageTitle}>TAG: {props.tag}</h1>
         <ArticleList articles={props.articles} />
       </Layout>

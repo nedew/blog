@@ -5,23 +5,27 @@ import { siteName } from '../config/blog.config.json'
 import styles from './styles/layout.module.scss'
 
 export default function Layout({
-  children
+  children,
+  title
 }: {
   children: React.ReactNode
+  title?: string
 }) {
+  const pageTitle = title !== undefined ? title + ' | ' + siteName : siteName
+
   return (
     <>
       <Head>
+        <title>{pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest"></link>
-        {/* <meta
-          name="description"
-          content="My Blog"
-        /> */}
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta property="og:locale" content="ja_JP" />
         <meta property="og:site_title" content={siteName} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content="nedew's blog" />
         <meta property="og:image" content="/icon-512x512.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />

@@ -19,7 +19,7 @@ export default ({ latestArticles }: {
   return (
     <>
       <Head>
-        <title>{siteName}</title>
+        {/* <title>{siteName}</title> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>

@@ -22,10 +22,10 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        <title>{props.title} | {siteName}</title>
+        {/* <title>{props.title} | {siteName}</title> */}
         <link rel="stylesheet" href='/css/prism.css' />
       </Head>
-      <Layout>
+      <Layout title={props.title}>
         <Article
           slug={props.slug}
           title={props.title}
