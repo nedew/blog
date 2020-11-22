@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
-import { siteName } from '../config/blog.config.json'
+import { siteName, siteUrl } from '../config/blog.config.json'
 import styles from './styles/layout.module.scss'
 
 export default function Layout({
@@ -26,7 +26,7 @@ export default function Layout({
         <meta property="og:site_title" content={siteName} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content="nedew's blog" />
-        <meta property="og:image" content="/icon-512x512.png" />
+        <meta property="og:image" content={`${siteUrl}icon-512x512.png`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
       </Head>
