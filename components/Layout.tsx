@@ -31,7 +31,7 @@ export default function Layout({
             <meta property="og:locale" content="ja_JP" />
             <meta property="og:site_title" content={siteName} />
             <meta property="og:title" content={pageTitle} />
-            {/* <meta property="og:description" content="nedew's blog" /> */}
+            <meta property="og:description" content="nedewのブログ" />
             <meta property="og:image" content={`${siteUrl}icon-512x512.png`} />
             <meta property="og:type" content="website" />
             <meta name="twitter:card" content="summary" />
