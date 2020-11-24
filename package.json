@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node script/generate-json.mjs && next dev",
-    "build": "node script/generate-json.mjs && next build",
+    "build": "node script/generate-json.mjs && next build && next build && next export",
     "start": "next start",
     "buildogp": "node script/generate-json.mjs && node script/generate-ogp.mjs"
   },
@@ -25,6 +25,7 @@
     "@mdx-js/loader": "^1.6.18",
     "@types/node": "^14.0.9",
     "@types/react": "^16.9.35",
+    "serve": "^11.3.2",
     "typescript": "^3.9.3"
   }
 }

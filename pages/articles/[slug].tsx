@@ -17,12 +17,12 @@ type Props = {
 }
 
 export default (props: Props) => {
-  // const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
+  const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
 
   return (
     <>
       <Head>
-        {/* <link rel="stylesheet" href='/css/prism.css' /> */}
+        <link rel="stylesheet" href='/css/prism.css' />
 
         <meta property="og:locale" content="ja_JP" />
         <meta property="og:type" content="article" />
@@ -38,7 +38,7 @@ export default (props: Props) => {
           date={props.date}
           tags={props.tags}
         >
-          {/* <MDX /> */}
+          <MDX />
         </Article>
       </Layout>
     </>
