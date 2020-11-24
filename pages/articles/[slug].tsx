@@ -22,7 +22,7 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href='/css/prism.css' />
+        {/* <link rel="stylesheet" href='/css/prism.css' /> */}
 
         <meta property="og:locale" content="ja_JP" />
         <meta property="og:type" content="article" />
