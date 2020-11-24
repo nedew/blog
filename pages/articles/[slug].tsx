@@ -17,7 +17,7 @@ type Props = {
 }
 
 export default (props: Props) => {
-  const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
+  // const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
 
   return (
     <>
@@ -38,7 +38,7 @@ export default (props: Props) => {
           date={props.date}
           tags={props.tags}
         >
-          <MDX />
+          {/* <MDX /> */}
         </Article>
       </Layout>
     </>
