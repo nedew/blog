@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node script/generate-json.mjs && next dev",
-    "build": "node script/generate-json.mjs && next build && next build && next export",
+    "build": "node script/generate-json.mjs && next build && next export",
     "start": "next start",
     "buildogp": "node script/generate-json.mjs && node script/generate-ogp.mjs"
   },
