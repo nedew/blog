@@ -7,7 +7,6 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import articleIds from '../../gen/articleIds.json'
 import { siteUrl } from '../../config/blog.config.json'
 
-// const articleDir = path.join(process.cwd(), 'articles')
 type Props = {
   fileName: string
   slug: string
@@ -22,8 +21,6 @@ export default (props: Props) => {
   return (
     <>
       <Head>
-        {/* <link rel="stylesheet" href='/css/prism.css' /> */}
-
         <meta property="og:locale" content="ja_JP" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={props.title} />
