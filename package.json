@@ -9,17 +9,19 @@
     "buildogp": "node script/generate-json.mjs && node script/generate-ogp.mjs"
   },
   "dependencies": {
+    "@babel/core": "^7.12.9",
     "@mapbox/rehype-prism": "^0.5.0",
     "@next/mdx": "^9.5.2",
     "canvas": "^2.6.1",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
-    "next": "9.4.4",
+    "next": "^10.0.3",
     "prismjs": "^1.22.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.26.10",
-    "stringify-object": "^3.3.0"
+    "stringify-object": "^3.3.0",
+    "which-pm-runs": "^1.0.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.18",

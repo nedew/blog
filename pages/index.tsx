@@ -8,7 +8,7 @@ import { getSortedArticles } from '../lib/getArticle'
 import tagMap from '../gen/tagMap.json'
 import { siteName, getLatestNumber } from '../config/blog.config.json'
 
-export default ({ latestArticles }: {
+const Top = ({ latestArticles }: {
   latestArticles: {
     slug: string
     title: string
@@ -37,3 +37,5 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export default Top

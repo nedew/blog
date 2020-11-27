@@ -13,7 +13,7 @@ export default function Article(props: {
     <>
       <div className={styles.date}>{formatDate(props.date)}</div>
       <h1 className={styles.title}>{props.title}</h1>
-      {/* <ArticlePageTag tags={props.tags} /> */}
+      <ArticlePageTag tags={props.tags} />
       <article className={styles.article}>
         {props.children}
       </article>

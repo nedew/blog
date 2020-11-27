@@ -12,9 +12,9 @@ module.exports = {
         // '@mdx-js/loader',
         {
           loader: '@mdx-js/loader',
-          // options: {
-          //   rehypePlugins: [rehypePrism]
-          // }
+          options: {
+            rehypePlugins: [rehypePrism]
+          }
         },
         path.join(__dirname, "./lib/fm-loader"),
       ],
