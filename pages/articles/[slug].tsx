@@ -15,7 +15,7 @@ type Props = {
   tags: string[]
 }
 
-export default (props: Props) => {
+const ArticlePage = (props: Props) => {
   const MDX = dynamic(() => import(`../../articles/${props.fileName}`))
 
   return (
@@ -69,3 +69,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 }
+
+export default ArticlePage

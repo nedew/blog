@@ -7,7 +7,7 @@ import tagMap from '../../gen/tagMap.json'
 import { siteName } from '../../config/blog.config.json'
 
 // /tags page
-export default ({ tags }: {
+const Tags = ({ tags }: {
   tags: {
     name: string
     number: string
@@ -32,3 +32,5 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export default Tags

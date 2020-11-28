@@ -17,8 +17,8 @@ export default function ArticleList(props: {
         return (
           <div className={styles.item} key={index}>
             <div className={styles.date}>{formatDate(a.date)}</div>
-            {/* <Link href='/articles/[slug]' as={`/articles/${a.slug}`}> */}
-            <Link href={`/articles/${a.slug}`}>
+            <Link href='/articles/[slug]' as={`/articles/${a.slug}`}>
+            {/* <Link href={`/articles/${a.slug}`}> */}
               <a className={styles.title}>{a.title}</a>
             </Link>
           </div>

@@ -16,7 +16,7 @@ type Props = {
   }[]
 }
 
-export default (props: Props) => {
+const TagPage = (props: Props) => {
   return (
     <>
       <Layout title={props.tag}>
@@ -48,3 +48,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 }
+
+export default TagPage

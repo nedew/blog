@@ -5,7 +5,7 @@ import utilStyles from '../../components/styles/util.module.scss'
 import { getSortedArticles } from '../../lib/getArticle'
 import { siteName } from '../../config/blog.config.json'
 
-export default () => {
+const Articles = () => {
   const items = getSortedArticles()
 
   return (
@@ -17,3 +17,5 @@ export default () => {
     </>
   )
 }
+
+export default Articles
