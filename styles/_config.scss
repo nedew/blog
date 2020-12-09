@@ -3,8 +3,8 @@ $maxWidth: 800px;
 
 $breakPoint: 500px;
 
-$wideMarginTop: .5rem;
-$wideMarginButtom: .5rem;
+$wideMarginTop: 1.3rem;
+$wideMarginButtom: 1.3rem;
 $widePaddingTop: 2.5rem;
 // $widePaddingRight: 40px;
 // $widePaddingLeft: 40px;
@@ -15,8 +15,8 @@ $widePaddingBottom: 3rem;
 $narrowPaddingTop: 1.8rem;
 // $narrowPaddingRight: 1.3rem;
 // $narrowPaddingLeft: 1.3rem;
-$narrowPaddingRight: 20px;
-$narrowPaddingLeft: 20px;
+$narrowPaddingRight: 25px;
+$narrowPaddingLeft: 25px;
 $narrowPaddingBottom: 2.5rem;
 
 $wideCodeMarginRight: - $widePaddingRight;
@@ -26,6 +26,8 @@ $narrowCodeMarginLeft: - $narrowPaddingLeft;
 
 // Colors
 $defaultLinkColor: #0774b5;
-// $bgColorBody: #f3f3f3;
+$textColor: #333333;
+// $textColor: #ebebeb;
 $bgColorBody: #fff;
+// $bgColorBody: #222222;
 $bgColorMain: #fff;

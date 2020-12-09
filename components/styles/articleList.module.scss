@@ -7,6 +7,7 @@
 }
 
 .item {
+  margin-top: 1.8rem;
   margin-bottom: 2.5rem;
   width: 100%;
 }
@@ -16,7 +17,8 @@
   // color: #4285F4;
   // color: #1171ac;
   color: $defaultLinkColor;
-  font-size: 22px;
+  // font-size: 22px;
+  font-size: 25px;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;

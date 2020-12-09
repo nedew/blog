@@ -1,26 +1,30 @@
 @import '../../styles/config';
 
 .articleTags {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin: 0 0 1rem 0;
+  // margin-top: 1rem;
+  // margin-bottom: 3rem;
 }
 
 .tag {
   display: inline-block;
-  background-color: #f1f1f1;
+  // background-color: #f1f1f1;
   color: #0774b5;
-  padding: 0.3rem 0.8rem;
+  // padding: 0.3rem 0.8rem;
   // margin: 0 0.7rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-right: 2rem;
+  margin-bottom: .5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 20px;
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'BIZ UDPGothic', 'Yu Gothic UI', 'Meiryo UI', Helvetica, sans-serif;
+  @media screen and (max-width: $breakPoint) {
+    margin-right: 1.2rem;
+  }
 }
 .tag:hover {
   // background-color: #f6f6f6;
-  background-color: #e9e9e9;
-  text-decoration: none;
+  // background-color: #e9e9e9;
+  // text-decoration: none;
 }

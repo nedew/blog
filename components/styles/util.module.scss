@@ -1,8 +1,14 @@
+@import "../../styles/_config.scss";
+
 .pageTitle {
   font-size: 23px;
+  font-size: 35px;
   margin-top: 0px;
-  margin-bottom: 2rem;
-  color: #262626;
+  margin-bottom: 2.3rem;
+  // color: #262626;
   padding-bottom: 0.2rem;
-  border-bottom: solid 3px #eff1f6;
+  // border-bottom: solid 3px #eff1f6;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 30px;
+  }
 }

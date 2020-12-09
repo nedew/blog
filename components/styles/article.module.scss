@@ -2,29 +2,62 @@
 
 .title {
   font-family: 'Montserrat', sans-serif;
-  color: #262626;
   font-size: 38px;
   word-break: break-word;
-  margin-top: 0.8rem;
-  margin-bottom: 1.4rem;
+  // margin-top: 0.8rem;
+  margin-top: 0;
+  // margin-bottom: 3.4rem;
+  margin-bottom: 1.1rem;
   letter-spacing: 0.04em;
   font-weight: 700px;
   @media screen and (max-width: $breakPoint) {
     font-size: 32px;
+    margin-bottom: 1.5rem;
   }
 }
 
+.info {
+  display: flex;
+  // justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1.4rem;
+  font-family: "Segoe UI", "Montserrat", sans-serif;
+}
+
+.authorIcon {
+  display: inherit;
+}
+.authorIconImg {
+  border-radius: 50%;
+}
+
+.authorName {
+  font-family: -apple-system, "Segoe UI", sans-serif;
+  font-size: 20px;
+  // color: $textColor;
+  color: inherit;
+  margin-right: 1rem;
+  margin-left: .6rem;
+  text-decoration: none;
+}
+.authorName:hover {
+  text-decoration: underline;
+}
+
 .date {
-  font-size: 16px;
+  vertical-align: bottom;
+  font-size: 15px;
   color: #727272;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
-  font-weight: 600;
+  font-family: sans-serif, apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
+  // font-weight: 600;
+  letter-spacing: 0.1rem;
+
 }
 
 .article {
+  margin-top: 3rem;
   font-size: 16px;
   line-height: 2rem;
-  color: #262626;
 
   > p > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -40,8 +73,7 @@
     font-size: 17px;
     border-radius: 10px;
     width: 100%;
-    // margin: 0 calc(50% - 100%);
-    // width: 100%;
+    // background-color: #34362e;
     overflow-x: auto;
     padding: 1rem $widePaddingRight;
     margin-right: $wideCodeMarginRight;
