@@ -29,18 +29,34 @@
   }
 }
 .title:hover {
-  opacity: 0.7;
+  // opacity: 0.7;
+  text-decoration: underline;
   // color: #AA4444;
   // color: $defaultLinkColor;
 }
 
+.articleInfo {
+  // display: flex;
+  // align-items: center;
+  div {
+    display: inline;
+  }
+}
+
+.separation {
+  font-size: 20px;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
 .date {
-  font-size: 17px;
+  display: inline-block;
+  font-size: 16px;
   color: #656565;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
-  font-weight: 600;
+  // font-weight: 600;
   // margin-bottom: 0.2rem;
   @media screen and (max-width: $breakPoint) {
-    font-size: 15px;
+    font-size: 14px;
   }
 }

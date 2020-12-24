@@ -7,10 +7,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
-        <div className={styles.copyright}>
-          {/* <span>© 2020 Made by <a href={profUrl} className={styles.me}>{name}</a></span> */}
-          © 2020 {siteName}
-        </div>
         <div className={styles.footerLinks}>
           <Link href='/articles'>
             <a>ARTICLES</a>
@@ -19,6 +15,9 @@ export default function Footer() {
             <a>TAGS</a>
           </Link>
           <a href={profUrl}>ABOUT ME</a>
+        </div>
+        <div className={styles.copyright}>
+          © 2020 {siteName}
         </div>
       </div>
     </footer>

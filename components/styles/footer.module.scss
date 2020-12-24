@@ -26,12 +26,14 @@
   @media screen and (max-width: $breakPoint) {
     padding-right: $narrowPaddingRight;
     padding-left: $narrowPaddingLeft;
+    display: inherit;
   }
 }
 
 .footerLinks {
   // margin-left: auto;
   font-size: 18px;
+  order: 2;
 
   a {
     display: inline-block;
@@ -42,19 +44,21 @@
   a:last-child {
     margin-right: 0;
   }
+
+  @media screen and (max-width: $breakPoint) {
+    font-size: 16px;
+    margin-bottom: .9rem;
+    order: inherit;
+  }
 }
 
 .copyright {
   // text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   margin-right: 1rem;
-}
-
-.me {
-  color: #5a95f5;
-  text-decoration: none;
-}
-.me:visited {
-  color: #5a95f5;
-  text-decoration: none;
+  order: 1;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 16px;
+    order: inherit;
+  }
 }
