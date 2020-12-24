@@ -7,6 +7,7 @@ export function getSortedArticles(limit?: number) {
       slug: article.slug,
       title: article.fm.title,
       date: article.fm.date,
+      tags: article.fm.tags,
     }
   })
 

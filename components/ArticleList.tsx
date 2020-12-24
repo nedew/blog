@@ -2,12 +2,14 @@ import Link from 'next/link'
 import Tags from './Tags'
 import styles from './styles/articleList.module.scss'
 import { formatDate } from '../lib/format'
+import Articles from '../pages/articles'
 
 export default function ArticleList(props: {
   articles: {
     slug: string
     title: string
     date: string
+    tags: string[]
   }[]
 }) {
   return (
@@ -21,7 +23,7 @@ export default function ArticleList(props: {
             {/* <Link href={`/articles/${a.slug}`}> */}
               <a className={styles.title}>{a.title}</a>
             </Link>
-            <Tags tags={['nextjs', 'nextjs', 'nextjs', 'nextjs']} />
+            <Tags tags={a.tags} />
           </div>
         )
       })}

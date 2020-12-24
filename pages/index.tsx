@@ -6,13 +6,14 @@ import UtilButton from '../components/UtilButton'
 import utilStyles from '../components/styles/util.module.scss'
 import { getSortedArticles } from '../lib/getArticle'
 import tagMap from '../gen/tagMap.json'
-import { siteName, getLatestNumber } from '../config/blog.config.json'
+import { getLatestNumber } from '../config/blog.config.json'
 
 const Top = ({ latestArticles }: {
   latestArticles: {
     slug: string
     title: string
     date: string
+    tags: string[]
   }[]
 }) => {
 
