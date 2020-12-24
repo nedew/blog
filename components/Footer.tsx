@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href='/tags'>
             <a>TAGS</a>
           </Link>
-          <a href={profUrl}>ABOUTME</a>
+          <a href={profUrl}>ABOUT ME</a>
         </div>
       </div>
     </footer>
