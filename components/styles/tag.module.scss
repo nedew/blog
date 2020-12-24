@@ -16,11 +16,12 @@
   margin-bottom: .5rem;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 20px;
+  // font-weight: 600;
+  font-size: 19px;
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'BIZ UDPGothic', 'Yu Gothic UI', 'Meiryo UI', Helvetica, sans-serif;
   @media screen and (max-width: $breakPoint) {
     margin-right: 1.2rem;
+    font-size: 17px;
   }
 }
 .tag:hover {

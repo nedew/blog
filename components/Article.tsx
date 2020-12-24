@@ -1,5 +1,5 @@
 import { formatDate } from '../lib/format'
-import ArticlePageTag from './ArticlePageTag'
+import Tags from './Tags'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './styles/article.module.scss'
@@ -32,7 +32,7 @@ export default function Article(props: {
         </Link>
         <div className={styles.date}>{formatDate(props.date)}</div>
       </div>
-      <ArticlePageTag tags={props.tags} />
+      <Tags tags={props.tags} />
       <article className={styles.article}>
         {props.children}
       </article>

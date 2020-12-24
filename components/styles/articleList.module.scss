@@ -16,22 +16,31 @@
   // color: #0c53c8;
   // color: #4285F4;
   // color: #1171ac;
-  color: $defaultLinkColor;
+  // color: $defaultLinkColor;
+  color: #333;
   // font-size: 22px;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 22px;
+  }
 }
 .title:hover {
   opacity: 0.7;
+  // color: #AA4444;
+  // color: $defaultLinkColor;
 }
 
 .date {
-  font-size: 14px;
-  color: #727272;
+  font-size: 17px;
+  color: #656565;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
   font-weight: 600;
   // margin-bottom: 0.2rem;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 15px;
+  }
 }
