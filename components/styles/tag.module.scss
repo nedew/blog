@@ -25,6 +25,9 @@
     font-size: 17px;
   }
 }
+.tag:last-child {
+  margin-right: 0;
+}
 .tag:hover {
   // background-color: #f6f6f6;
   // background-color: #e9e9e9;

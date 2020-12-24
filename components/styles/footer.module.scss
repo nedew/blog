@@ -3,8 +3,8 @@
 .footer {
   width: 100%;
   // background-color: #fafafa;
-  color: #bbbbbb;
-  padding: 1.5rem 0;
+  // color: #bbbbbb;
+  padding: 1.8rem 0;
   border-top: 1px solid #ededed;
   margin-top: auto;
   @media screen and (max-width: $breakPoint) {
@@ -16,6 +16,9 @@
   max-width: $maxWidth;
   box-sizing: border-box;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   padding-right: $widePaddingRight;
   padding-left: $widePaddingLeft;
@@ -26,8 +29,25 @@
   }
 }
 
+.footerLinks {
+  // margin-left: auto;
+  font-size: 18px;
+
+  a {
+    display: inline-block;
+    color: $defaultLinkColor;
+    text-decoration: none;
+    margin-right: 1.7rem;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+}
+
 .copyright {
-  text-align: center;
+  // text-align: center;
+  font-size: 17px;
+  margin-right: 1rem;
 }
 
 .me {
