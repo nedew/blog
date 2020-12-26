@@ -7,12 +7,12 @@
   // margin-top: 0.8rem;
   margin-top: 0;
   // margin-bottom: 3.4rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 3rem;
   letter-spacing: 0.04em;
   font-weight: 700px;
   @media screen and (max-width: $breakPoint) {
     font-size: 32px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -20,10 +20,10 @@
   display: flex;
   font-size: 19px;
   font-weight: 500;
-  color: #4c4c4c;
+  color: var(--color-light-text);
   letter-spacing: 0.05rem;
   align-items: center;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.8rem;
   font-family: -apple-system, "Segoe UI", sans-serif;
   @media screen and (max-width: $breakPoint) {
     font-size: 17px;
@@ -37,7 +37,7 @@
   border-radius: 50%;
 }
 .authorName {
-  color: #4c4c4c;
+  color: var(--color-light-text);
   margin-right: 1rem;
   margin-left: .6rem;
   text-decoration: none;
@@ -58,7 +58,7 @@
   > p > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     background-color: #f4f4f4;
-    color: #4c4c4c;
+    color: var(--color-light-text);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     margin-right: 0.3rem;
@@ -69,7 +69,7 @@
     font-size: 16px;
     border-radius: 10px;
     width: 100%;
-    // background-color: #34362e;
+    background-color: var(--color-code-bg);
     overflow-x: auto;
     padding: 1rem $widePaddingRight;
     margin-right: $wideCodeMarginRight;

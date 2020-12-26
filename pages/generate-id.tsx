@@ -6,7 +6,7 @@ import articleIds from '../gen/articleIds.json'
 import { siteName } from '../config/blog.config.json'
 import { generateUniqueId } from '../lib/generateUniqueId'
 
-export default ({ uniqueId }: { uniqueId: string }) => {
+const GenerateId = ({ uniqueId }: { uniqueId: string }) => {
   return (
     <>
       <Head>
@@ -29,3 +29,5 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+export default GenerateId

@@ -1,0 +1,31 @@
+@import "../../styles/_config.scss";
+
+.switchButton {
+  margin: auto 0;
+  cursor: pointer;
+  svg {
+    fill: var(--color-theme-switch-btn);
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: .5rem;
+    // transform: scale(-1, 1);
+    @media screen and (max-width: $breakPoint) {
+      margin-right: 0;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+:root[data-theme=dark] {
+  .moon {
+    display: none;
+  }
+}
+
+:root[data-theme=light] {
+  .sunny {
+    display: none;
+  }
+}

@@ -7,7 +7,7 @@
 
 .button {
   // color: #4285F4;
-  color: $defaultLinkColor;
+  color: var(--color-link);
   text-align: center;
   text-decoration: none;
 }

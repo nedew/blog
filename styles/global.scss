@@ -1,5 +1,26 @@
 @import "./_config.scss";
 
+// Default
+:root {
+  --color-text: #333333;
+  --color-light-text: #4c4c4c;
+  --color-bg: #fff;
+  --color-link: #0774b5;
+  --color-line: #ededed;
+  --color-theme-switch-btn: #8d8d8d;
+  --color-code-bg: #272822;
+}
+// Dark Mode
+:root[data-theme=dark] {
+  --color-text: #dfdfdf;
+  --color-light-text: #9d9d9d;
+  --color-bg: #222;
+  --color-link: #09cbe6;
+  --color-line: #343434;
+  --color-theme-switch-btn: #e2e2e2;
+  --color-code-bg: #142032;
+}
+
 html,
 body {
   padding: 0;
@@ -14,20 +35,8 @@ body {
   font-kerning: normal;
   letter-spacing: 0.03rem;
   -webkit-font-smoothing: antialiased;
-  // background-color: #f8f8f8;
-  background-color: $bgColorBody;
-  // background-color: #eff1f6;
-  // background-color: #f6f1ef;
-  color: $textColor;
-
-  @media screen and (max-width: $maxWidth) {
-    // background-color: #fff;
-  }
-
-  // @media (prefers-color-scheme: dark) {
-  //   color: white;
-  //   background-color: #333;
-  // }
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 

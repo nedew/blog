@@ -5,7 +5,7 @@
   // background-color: #fafafa;
   // color: #bbbbbb;
   padding: 1.8rem 0;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid var(--color-line);
   margin-top: auto;
   @media screen and (max-width: $breakPoint) {
     padding: 1rem 0;
@@ -37,7 +37,7 @@
 
   a {
     display: inline-block;
-    color: $defaultLinkColor;
+    color: var(--color-link);
     text-decoration: none;
     margin-right: 1.7rem;
   }
@@ -53,7 +53,6 @@
 }
 
 .copyright {
-  // text-align: center;
   font-size: 18px;
   margin-right: 1rem;
   order: 1;

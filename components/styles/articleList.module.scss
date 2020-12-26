@@ -16,9 +16,8 @@
   // color: #0c53c8;
   // color: #4285F4;
   // color: #1171ac;
-  // color: $defaultLinkColor;
-  color: $textColor;
-  text-decoration-color: $myColor;
+  // color: $linkColor;
+  color: var(--color-text);
   // font-size: 22px;
   font-size: 25px;
   font-weight: bold;
@@ -33,7 +32,7 @@
   // opacity: 0.7;
   text-decoration: underline;
   // color: #AA4444;
-  // color: $defaultLinkColor;
+  // color: $linkColor;
 }
 
 .articleInfo {
@@ -56,7 +55,7 @@
 .date {
   display: inline-block;
   font-size: 16px;
-  color: #656565;
+  color: var(--color-light-text);
   font-family: -apple-system, BlinkMacSystemFont, sans-serif, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo;
   // font-weight: 600;
   // margin-bottom: 0.2rem;

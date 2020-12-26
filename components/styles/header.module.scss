@@ -10,7 +10,7 @@
   padding: 1.7rem 0;
   // padding-top: 2.7rem;
   // padding-bottom: 2rem;
-  border-bottom: solid 1px #ededed;
+  border-bottom: solid 1px var(--color-line);
   // box-shadow: 0 2.2px 4px 0 rgba(0,0,0,0.1);
   @media screen and (max-width: $breakPoint) {
     // padding-top: 1.5rem;
@@ -25,6 +25,8 @@
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  justify-content: space-between;
 
   padding-right: $widePaddingRight;
   padding-left: $widePaddingLeft;
@@ -43,6 +45,7 @@
   // font-family: 'Montserrat Alternates';
   // font-family: 'Righteous';
   // font-family: 'Bungee';
+  align-items: center;
   line-height: 1.5;
   letter-spacing: 1px;
   color: $myColor;
