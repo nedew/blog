@@ -1,0 +1,31 @@
+---
+title: "Mdxで書けるMarkdownのスタイル確認"
+date: "2020-12-29-06-56"
+tags: [mdx, markdown, blog]
+---
+
+これはテスト記事です
+- これはテストのテキストです。
+- これはThis is a pen;
+- React compornent;
+- Next.js
+
+# これはテストです React Components - Next.js
+
+`content`
+
+# Code block
+```js
+console.log('test desu')
+const test = getPostData()
+```
+
+```ts
+import { parse, format } from 'date-fns'
+
+export function formatDate(date: string) {
+  const fmt = parse(date, 'yyyy-MM-dd-HH-mm', new Date())
+  // return format(fmt, 'yyyy/MM/dd HH:mm')
+  return format(fmt, 'yyyy/MM/dd')
+}
+```

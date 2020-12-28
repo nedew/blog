@@ -41,5 +41,18 @@
         "programming"
       ]
     }
+  },
+  {
+    "slug": "75234",
+    "fileName": "202012290656_75234_markdown-style-test.mdx",
+    "fm": {
+      "title": "Mdxで書けるMarkdownのスタイル確認",
+      "date": "2020-12-29-06-56",
+      "tags": [
+        "mdx",
+        "markdown",
+        "blog"
+      ]
+    }
   }
 ]

@@ -1,8 +1,8 @@
 import articles from '../gen/articles.json'
 
-export function getSortedArticles(limit?: number) {
+export function getSortedArticles(limit?: number, tag?: string) {
 
-  const items = articles.map(article => {
+  let items = articles.map(article => {
     return {
       slug: article.slug,
       title: article.fm.title,
@@ -20,7 +20,13 @@ export function getSortedArticles(limit?: number) {
   })
 
   if (limit) {
-    return items.slice(0, limit)
+    items = items.slice(0, limit)
+  }
+
+  if (tag) {
+    items = items.filter(i => {
+      return i.tags.includes(tag)
+    })
   }
 
   return items

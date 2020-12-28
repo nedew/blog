@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       tag: tag,
-      articles: getSortedArticles(),
+      articles: getSortedArticles(0, tag),
     }
   }
 }

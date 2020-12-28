@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import Tags from './Tags'
+import TagsInArticleList from './TagsInArticleList'
 import styles from './styles/articleList.module.scss'
 import { formatDate } from '../lib/format'
-import Articles from '../pages/articles'
 
 export default function ArticleList(props: {
   articles: {
@@ -25,8 +24,8 @@ export default function ArticleList(props: {
             </Link>
             <div className={styles.articleInfo}>
               <div className={styles.date}>{formatDate(a.date)}</div>
-              <div className={styles.separation}> / </div>
-              <Tags tags={a.tags} />
+              <div className={styles.separation}>/</div>
+              <TagsInArticleList tags={a.tags} />
             </div>
           </div>
         )

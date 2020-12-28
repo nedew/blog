@@ -20,11 +20,12 @@
   display: flex;
   font-size: 19px;
   font-weight: 500;
+  // font-weight: bold;
   color: var(--color-light-text);
   letter-spacing: 0.05rem;
   align-items: center;
   margin-bottom: 0.8rem;
-  font-family: -apple-system, "Segoe UI", sans-serif;
+  font-family: 'Roboto', -apple-system, "Segoe UI", sans-serif;
   @media screen and (max-width: $breakPoint) {
     font-size: 17px;
     // font-weight: 400;
@@ -47,7 +48,6 @@
 }
 
 .date {
-  font-family: -apple-system, "Segoe UI", sans-serif;
 }
 
 .article {
