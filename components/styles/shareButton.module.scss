@@ -1,0 +1,20 @@
+@import "../../styles/_config.scss";
+
+.shareButtons {
+  margin-top: 5rem;
+  text-align: right;
+  @media screen and (max-width: $breakPoint) {
+    margin-top: 3rem;
+  }
+}
+
+.button {
+  margin-right: .9rem;
+}
+.button:last-child {
+  margin-right: 0;
+}
+.button:hover {
+  transition: all 0.2s;
+  opacity: .6;
+}

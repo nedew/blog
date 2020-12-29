@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from '../../components/Layout'
 import Article from '../../components/Article'
+import ShareButton from '../../components/ShareButton'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { GetStaticProps, GetStaticPaths } from 'next'
@@ -37,6 +38,7 @@ const ArticlePage = (props: Props) => {
         >
           <MDX />
         </Article>
+        <ShareButton slug={props.slug} title={props.title} />
       </Layout>
     </>
   )
