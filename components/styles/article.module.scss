@@ -57,12 +57,12 @@
 
   > p > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    background-color: #f4f4f4;
-    color: var(--color-light-text);
-    padding: 0.2rem 0.5rem;
+    background-color: var(--color-mini-code-bg);
+    // color: var(--color-light-text);
+    padding: 0.15rem 0.4rem;
     border-radius: 4px;
-    margin-right: 0.3rem;
-    margin-left: 0.3rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
   }
 
   > pre {
