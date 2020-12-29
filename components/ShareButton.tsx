@@ -17,7 +17,7 @@ export default function ShareButton({slug, title}: { slug: string, title: string
         </a>
       </Link>
       <Link href={encodeURI(facebookUrl)}>
-        <a className={styles.button} rel='nofollow noopener noreferrer'>
+        <a className={styles.button} target='_blank' rel='nofollow noopener noreferrer'>
           <Image src='/img/facebook-icon.png' alt='Facebook icon' width={34} height={34} />
         </a>
       </Link>
