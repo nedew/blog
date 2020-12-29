@@ -6,9 +6,7 @@
 }
 
 .tag {
-  // color: #0c53c8;
   font-size: 18px;
-  // letter-spacing: 0.08rem;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
   font-weight: 300;
 }
@@ -16,7 +14,6 @@
   color: var(--color-text);
 }
 .tag > a {
-  // color: #0c53c8;
   color: var(--color-link);
   text-decoration: none;
 }

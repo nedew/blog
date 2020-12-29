@@ -4,9 +4,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 38px;
   word-break: break-word;
-  // margin-top: 0.8rem;
   margin-top: 0;
-  // margin-bottom: 3.4rem;
   margin-bottom: 3rem;
   letter-spacing: 0.04em;
   font-weight: 700px;
@@ -28,7 +26,6 @@
   font-family: 'Roboto', -apple-system, "Segoe UI", sans-serif;
   @media screen and (max-width: $breakPoint) {
     font-size: 17px;
-    // font-weight: 400;
   }
 }
 .authorIcon {
@@ -65,7 +62,6 @@
 
   table {
     display: block;
-    // border: solid 1px var(--color-text);
     border-collapse: collapse;
     min-width: 100%;
     overflow-x: auto;
@@ -89,7 +85,6 @@
   > p > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     background-color: var(--color-code-bg);
-    // color: var(--color-light-text);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
     margin-right: 0.2rem;
@@ -121,28 +116,27 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
     font-weight: bold;
-    line-height: 1.6;
+    line-height: 1.4;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
   h1 {
-    font-size: 34px;
+    font-size: 29px;
   }
   h2 {
-    font-size: 29px;
+    font-size: 27px;
   }
   h3 {
     font-size: 25px;
   }
   h4 {
-    font-size: 21px;
+    font-size: 23px;
   }
   h5 {
-    font-size: 17px;
+    font-size: 21px;
   }
   h6 {
-    font-size: 14px;
+    font-size: 17px;
   }
 }

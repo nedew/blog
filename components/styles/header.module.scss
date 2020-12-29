@@ -4,17 +4,9 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  // background-color: #fcfcfc;
-  // background-color: #ffffff;
-  // background-color: #AA4444;
   padding: 1.7rem 0;
-  // padding-top: 2.7rem;
-  // padding-bottom: 2rem;
   border-bottom: solid 1px var(--color-line);
-  // box-shadow: 0 2.2px 4px 0 rgba(0,0,0,0.1);
   @media screen and (max-width: $breakPoint) {
-    // padding-top: 1.5rem;
-    // padding-bottom: 1.4rem;
     padding: 1rem 0;
   }
 }
@@ -41,10 +33,6 @@
 .siteTitle {
   display: inline-block;
   font-family: 'Orbitron', Montserrat, sans-serif;
-  // font-family: Montserrat;
-  // font-family: 'Montserrat Alternates';
-  // font-family: 'Righteous';
-  // font-family: 'Bungee';
   align-items: center;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -58,7 +46,3 @@
     font-size: 25px;
   }
 }
-// .siteTitle:first-letter {
-//   color: #f45842;
-//   color: #fcfcfc;
-// }
