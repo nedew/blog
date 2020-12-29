@@ -3,11 +3,10 @@ import Image from 'next/image'
 import styles from './styles/shareButton.module.scss'
 import { name, siteUrl } from '../config/blog.config.json'
 
-export default function ShareButton(props: { slug: string, title: string }) {
-  const shareUrl = siteUrl + 'articles/' + props.slug
-  const twitterUrl = 'https://twitter.com/intent/tweet?text='
-    + props.title + ` %7C ${name}&url=%0d` + shareUrl
-
+export default function ShareButton({slug, title}: { slug: string, title: string }) {
+  const shareTitle = (title.length > 100) ? title.slice(0, 100) + '...' : title
+  const shareUrl = siteUrl + 'articles/' + slug
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${shareTitle} | ${name}&url=\n${shareUrl}`
   const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl
 
   return (
