@@ -14,8 +14,8 @@
 }
 // Dark Mode
 :root[data-theme=dark] {
-  --color-text: #dfdfdf;
-  --color-light-text: #9d9d9d;
+  --color-text: #f3f3f3;
+  --color-light-text: #b1b1b1;
   --color-bg: #222;
   --color-link: #09cbe6;
   --color-line: #343434;
@@ -23,7 +23,7 @@
   --color-codeblock-bg: #383b3f;
   // --color-codeblock-bg: #282d3c;
   --color-code-bg: #2e3f58;
-  --color-blockquote:#484848;
+  --color-blockquote:#797979;
 }
 
 html,
