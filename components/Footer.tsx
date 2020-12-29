@@ -17,7 +17,7 @@ export default function Footer() {
           <a href={profUrl}>ABOUT ME</a>
         </div>
         <div className={styles.copyright}>
-          © 2020 {siteName}
+         &copy; 2020 {siteName}
         </div>
       </div>
     </footer>

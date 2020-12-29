@@ -55,7 +55,15 @@
   font-size: 16px;
   line-height: 2rem;
 
-  > table {
+  a {
+    color: var(--color-link)
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
     display: block;
     // border: solid 1px var(--color-text);
     border-collapse: collapse;
@@ -70,7 +78,7 @@
     }
   }
 
-  > blockquote {
+  blockquote {
     border-left: 5px solid var(--color-blockquote);
     padding: .1rem 1rem;
     margin-inline-start: 0;
@@ -94,7 +102,7 @@
     width: 100%;
     background-color: var(--color-codeblock-bg);
     overflow-x: auto;
-    padding: 1rem $widePaddingRight;
+    padding: 1.4rem $widePaddingRight;
     margin-right: $wideCodeMarginRight;
     margin-left: $wideCodeMarginLeft;
     margin-bottom: 3rem;
@@ -103,7 +111,7 @@
     }
     @media screen and (max-width: $breakPoint) {
       width: 100%;
-      padding: 1rem $narrowPaddingRight;
+      padding: 1.4rem $narrowPaddingRight;
       margin-right: $narrowCodeMarginRight;
       margin-left: $narrowCodeMarginLeft;
 
@@ -111,7 +119,7 @@
     }
   }
 
-  > h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-size: 28px;
     font-weight: bold;
@@ -119,19 +127,22 @@
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
-  > h1 {
-    font-size: 34px;
-  }
-  > h2 {
+  // h1 {
+  //   font-size: 34px;
+  // }
+  h2 {
     font-size: 29px;
   }
-  > h3 {
-    font-size: 27px;
-  }
-  > h4 {
+  h3 {
     font-size: 25px;
   }
-  > h5 {
-    font-size: 23px;
+  h4 {
+    font-size: 21px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  h6 {
+    font-size: 14px;
   }
 }
