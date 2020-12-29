@@ -9,8 +9,8 @@
   --color-link: #0774b5;
   --color-line: #ededed;
   --color-theme-switch-btn: #8d8d8d;
-  --color-code-bg: #272822;
-  --color-mini-code-bg: #eeeeee;
+  --color-codeblock-bg: #272822;
+  --color-code-bg: #eeeeee;
 }
 // Dark Mode
 :root[data-theme=dark] {
@@ -20,8 +20,9 @@
   --color-link: #09cbe6;
   --color-line: #343434;
   --color-theme-switch-btn: #e2e2e2;
-  --color-code-bg: #0d1219;
-  --color-mini-code-bg: #27364b;
+  --color-codeblock-bg: #141b26;
+  // --color-codeblock-bg: #282d3c;
+  --color-code-bg: #2e3f58;
 }
 
 html,

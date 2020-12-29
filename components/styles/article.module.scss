@@ -57,7 +57,7 @@
 
   > p > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    background-color: var(--color-mini-code-bg);
+    background-color: var(--color-code-bg);
     // color: var(--color-light-text);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
@@ -69,7 +69,7 @@
     font-size: 16px;
     border-radius: 10px;
     width: 100%;
-    background-color: var(--color-code-bg);
+    background-color: var(--color-codeblock-bg);
     overflow-x: auto;
     padding: 1rem $widePaddingRight;
     margin-right: $wideCodeMarginRight;
