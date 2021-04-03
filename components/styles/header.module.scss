@@ -4,10 +4,10 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  padding: 1.7rem 0;
+  padding: 1rem 0;
   border-bottom: solid 1px var(--color-line);
   @media screen and (max-width: $breakPoint) {
-    padding: 1rem 0;
+    padding: .8rem 0;
   }
 }
 
@@ -38,11 +38,10 @@
   letter-spacing: 1px;
   color: $myColor;
   text-decoration: none;
-  font-size: 30px;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
   user-select: none;
   @media screen and (max-width: $breakPoint) {
-    font-size: 25px;
+    font-size: 20px;
   }
 }

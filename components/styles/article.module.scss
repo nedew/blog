@@ -1,23 +1,26 @@
 @import "../../styles/_config.scss";
 
 .title {
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 38px;
+  font-size: 40px;
   word-break: break-word;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   letter-spacing: 0.04em;
   font-weight: 700px;
   @media screen and (max-width: $breakPoint) {
     font-size: 32px;
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 }
 
 .info {
   display: flex;
+  justify-content: center;
   font-size: 19px;
-  font-weight: 500;
+  // font-weight: 500;
   // font-weight: bold;
   color: var(--color-light-text);
   letter-spacing: 0.05rem;
@@ -44,13 +47,13 @@
   text-decoration: underline;
 }
 
-.date {
-}
-
 .article {
   margin-top: 3rem;
-  font-size: 16px;
-  line-height: 2rem;
+  font-size: 18px;
+  line-height: 1.9rem;
+  @media screen and (max-width: $breakPoint) {
+    font-size: 15px;
+  }
 
   a {
     color: var(--color-link)
@@ -58,6 +61,8 @@
 
   img {
     max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   table {
@@ -74,6 +79,10 @@
     }
   }
 
+  ul {
+    padding-inline-start: 30px;
+  }
+
   blockquote {
     border-left: 5px solid var(--color-blockquote);
     padding: .1rem 1rem;
@@ -82,22 +91,28 @@
     margin: 2rem 0;
   }
 
-  > p > code {
+  p code, li code {
+    font-size: 16px;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     background-color: var(--color-code-bg);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
     margin-right: 0.2rem;
     margin-left: 0.2rem;
+    @media screen and (max-width: $breakPoint) {
+      font-size: 14px;
+    }
   }
 
-  > pre {
+  pre {
+    color: var(--color-codeblock-text);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     font-size: 16px;
     border-radius: 3px;
     width: 100%;
     background-color: var(--color-codeblock-bg);
     overflow-x: auto;
-    padding: 1.4rem $widePaddingRight;
+    padding: 1rem $widePaddingRight;
     margin-right: $wideCodeMarginRight;
     margin-left: $wideCodeMarginLeft;
     margin-bottom: 3rem;
@@ -106,7 +121,7 @@
     }
     @media screen and (max-width: $breakPoint) {
       width: 100%;
-      padding: 1.4rem $narrowPaddingRight;
+      padding: 1.2rem $narrowPaddingRight;
       margin-right: $narrowCodeMarginRight;
       margin-left: $narrowCodeMarginLeft;
 
@@ -114,18 +129,42 @@
     }
   }
 
+  // Plain text code block
+  pre:not([class*="language-"]),
+  pre code:not([class*="language-"]) {
+    color: var(--color-codeblock-text);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 16px;
+    color: #d4d4d4;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     line-height: 1.4;
-    margin-top: 3rem;
+    margin-top: 3.7rem;
     margin-bottom: 1.5rem;
   }
   h1 {
-    font-size: 29px;
+    font-size:31px;
   }
   h2 {
-    font-size: 27px;
+    font-size: 29px;
   }
   h3 {
     font-size: 24px;

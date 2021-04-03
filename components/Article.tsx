@@ -15,24 +15,26 @@ export default function Article(props: {
   return (
     <>
       <h1 className={styles.title}>{props.title}</h1>
-      <div className={styles.info}>
-        <Link href={blogConfig.twitterUrl}>
-          <a className={styles.authorIcon}>
-            <Image
-              src='/img/icon.png'
-              alt={blogConfig.name}
-              width={38}
-              height={38}
-              className={styles.authorIconImg}
-            />
-          </a>
-        </Link>
-        <Link href={blogConfig.twitterUrl}>
-          <a className={styles.authorName}>@{blogConfig.name}</a>
-        </Link>
-        <div className={styles.date}>{formatDate(props.date)}</div>
+      <div className={styles.articleDetails}>
+        <div className={styles.info}>
+          <Link href={blogConfig.twitterUrl}>
+            <a className={styles.authorIcon}>
+              <Image
+                src='/img/icon.png'
+                alt={blogConfig.name}
+                width={33}
+                height={33}
+                className={styles.authorIconImg}
+              />
+            </a>
+          </Link>
+          <Link href={blogConfig.twitterUrl}>
+            <a className={styles.authorName}>@{blogConfig.name}</a>
+          </Link>
+          <div className={styles.date}>{formatDate(props.date)}</div>
+        </div>
+        <Tags tags={props.tags} />
       </div>
-      <Tags tags={props.tags} />
       <article className={styles.article}>
         {props.children}
       </article>

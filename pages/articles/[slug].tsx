@@ -61,7 +61,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params.slug as string
   const fileName = articleIds[slug]
-  // const data = articleList[slug]
   const { frontMatter } = await import(`../../articles/${fileName}`)
   return {
     props: {

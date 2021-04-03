@@ -1,12 +1,14 @@
 @import "../../styles/_config.scss";
 
 .pageTitle {
-  font-size: 23px;
-  font-size: 35px;
-  margin-top: 0px;
-  margin-bottom: 2.3rem;
-  padding-bottom: 0.2rem;
+  text-align: center;
+  // font-size: 23px;
+  font-size: 32px;
+  margin-top: 1.3rem;
+  margin-bottom: 3rem;
   @media screen and (max-width: $breakPoint) {
-    font-size: 30px;
+    font-size: 24px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 }

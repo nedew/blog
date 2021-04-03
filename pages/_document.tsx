@@ -6,7 +6,8 @@ export default class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@900&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+          {/* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@900&family=Roboto:wght@400;500&display=swap" rel="stylesheet" /> */}
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&family=Montserrat:wght@700&family=Orbitron:wght@900&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

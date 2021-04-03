@@ -5,14 +5,14 @@
   cursor: pointer;
   svg {
     fill: var(--color-theme-switch-btn);
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
     margin-right: .5rem;
     @media screen and (max-width: $breakPoint) {
       margin-right: 0;
-      width: 25px;
-      height: 25px;
+      width: 24px;
+      height: 24px;
     }
   }
 }

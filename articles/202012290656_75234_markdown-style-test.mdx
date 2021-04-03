@@ -21,7 +21,7 @@ tags: [mdx, markdown, blog]
 2. test2
 3. test3
 
-```js live=true
+```js live=true data-file=script.js
 console.log('live coding')
 ```
 
@@ -36,6 +36,8 @@ discord.jsにおいて、テーブルをinlineに表示したい場合は`inline
 
 > Botのいるチャンネルにoverwatch `<battletag> <region> <platform>` という形での投稿がされた時に指定されたプレイヤーの名前、レベル、レートをBotに返信させるサンプルコードを書いてみます。
 
+Botのいるチャンネルにoverwatch `<battletag> <region> <platform>` という形での投稿がされた時に指定されたプレイヤーの名前、レベル、レートをBotに返信させるサンプルコードを書いてみます。
+
 Overwatchのプレイヤーデータ自体はここから見れるのでスクレイピングして持ってくるのも一つですが、その辺りを代わりにやってくれるoverwatch-api(非公式)というものが提供されてるので利用させてもらいましょう。  
 今回使用するパッケージをインストールします。
 
@@ -43,7 +45,7 @@ Overwatchのプレイヤーデータ自体はここから見れるのでスク�
 
 consoleに文字列を出力させる
 
-```js
+```js test
 console.log('test desu')
 const test = getPostData()
 ```

@@ -54,5 +54,17 @@
         "blog"
       ]
     }
+  },
+  {
+    "slug": "38226",
+    "fileName": "202012310000_38226_made-blog-with-nextjs.mdx",
+    "fm": {
+      "title": "Next.jsでブログを作った",
+      "date": "2020-12-31-00-00",
+      "tags": [
+        "nextjs",
+        "mdx"
+      ]
+    }
   }
 ]

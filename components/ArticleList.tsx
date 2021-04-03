@@ -16,18 +16,12 @@ export default function ArticleList(props: {
       {/* <div className={styles.spacer}></div> */}
       {props.articles.map((a, index) => {
         return (
-          <div className={styles.item} key={index}>
-            {/* <div className={styles.date}>{formatDate(a.date)}</div> */}
-            <Link href='/articles/[slug]' as={`/articles/${a.slug}`}>
-            {/* <Link href={`/articles/${a.slug}`}> */}
-              <a className={styles.title}>{a.title}</a>
-            </Link>
-            <div className={styles.articleInfo}>
+          <Link href='/articles/[slug]' as={`/articles/${a.slug}`}>
+            <div className={styles.item} key={index}>
               <div className={styles.date}>{formatDate(a.date)}</div>
-              <div className={styles.separation}>/</div>
-              <TagsInArticleList tags={a.tags} />
+              <div className={styles.title}>{a.title}</div>
             </div>
-          </div>
+          </Link>
         )
       })}
     </>

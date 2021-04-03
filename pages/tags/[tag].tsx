@@ -21,7 +21,7 @@ const TagPage = (props: Props) => {
   return (
     <>
       <Layout title={props.tag}>
-        <h1 className={utilStyles.pageTitle}>TAG: {props.tag}</h1>
+        <h1 className={utilStyles.pageTitle}>#{props.tag}</h1>
         <ArticleList articles={props.articles} />
       </Layout>
     </>
