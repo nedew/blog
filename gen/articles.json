@@ -1,69 +1,14 @@
 [
   {
-    "slug": "64403",
-    "fileName": "202008271034_64403_develop-test-1.mdx",
-    "fm": {
-      "title": "これはテストのタイトルReact_Next.jsですこれはテストのタイトルReact_Next.jsですこれはテストのタイトルReact_Next.jsです - 1",
-      "date": "2020-10-02-04-19",
-      "tags": [
-        "dev",
-        "nextjs",
-        "react"
-      ]
-    }
-  },
-  {
-    "slug": "80520",
-    "fileName": "202008301100_80520_develop-test-2.mdx",
-    "fm": {
-      "title": "ランダム文字列を生成して、テスト記事の本文として記載したもの - 2",
-      "date": "2020-10-03-15-38",
-      "tags": [
-        "dev",
-        "nextjs",
-        "react",
-        "test",
-        "discordjs"
-      ]
-    }
-  },
-  {
-    "slug": "13990",
-    "fileName": "202009120358_13990_develop-test-3.mdx",
-    "fm": {
-      "title": "本文無しのテスト記事だよ - 3",
-      "date": "2020-10-04-22-19",
-      "tags": [
-        "dev",
-        "nextjs",
-        "react",
-        "test",
-        "programming"
-      ]
-    }
-  },
-  {
-    "slug": "75234",
-    "fileName": "202012290656_75234_markdown-style-test.mdx",
-    "fm": {
-      "title": "Mdxで書けるMarkdownのスタイル確認",
-      "date": "2020-12-29-06-56",
-      "tags": [
-        "mdx",
-        "markdown",
-        "blog"
-      ]
-    }
-  },
-  {
     "slug": "38226",
-    "fileName": "202012310000_38226_made-blog-with-nextjs.mdx",
+    "fileName": "202104040000_38226_made-blog-with-nextjs.mdx",
     "fm": {
       "title": "Next.jsでブログを作った",
-      "date": "2020-12-31-00-00",
+      "date": "2021-04-04-00-00",
       "tags": [
         "nextjs",
-        "mdx"
+        "mdx",
+        "blog"
       ]
     }
   }

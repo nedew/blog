@@ -167,15 +167,36 @@
     font-size: 29px;
   }
   h3 {
-    font-size: 24px;
+    font-size: 25px;
   }
   h4 {
-    font-size: 21px;
+    font-size: 22px;
   }
   h5 {
     font-size: 18px;
   }
   h6 {
     font-size: 15px;
+  }
+
+  @media screen and (max-width: $breakPoint) {
+    h1 {
+      font-size:29px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+    h3 {
+      font-size: 23px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 15px;
+    }
   }
 }

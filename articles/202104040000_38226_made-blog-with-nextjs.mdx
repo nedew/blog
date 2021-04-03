@@ -4,7 +4,7 @@ date: "2021-04-04-00-00"
 tags: [nextjs, mdx, blog]
 ---
 
-Next.jsで自分用のブログを作った（このブログ）ので、開発時に工夫した事を書こうと思います。
+Next.jsで自分用のブログを作った（このブログ）ので、開発時に工夫した事を簡単に書こうと思います。
 
 ブログとしての基本的な機能はだいぶ前に出来ていたものの、CSSとかOGP辺りの見た目の部分が面倒で後回しにしていたら年明けるどころか桜咲いてました。  
 何か明確な用途があったから作ったわけではなくReact周りの技術で何か作りたくて作った感じなので、継続して更新するかは分かりませんが、せっかく作ったからには色々書きたい気持ちです。
@@ -51,7 +51,7 @@ export default ({children}) => {
 - ビルド時にファイル名やFront Matterから記事のメタデータを拾ったりしたかったので、そういう対象のファイルが`pages`以下にあるのは何か違う気がした
 
 
-回避策として`pages/articles/[slug].ts`で記事ページへのリクエストを受けて、対応する記事を [Dynamic import](https://nextjs.org/docs/advanced-features/dynamic-import) して表示するようにしてます。
+代わりに`pages/articles/[slug].ts`で記事ページへのリクエストを受けて、対応する記事を [Dynamic import](https://nextjs.org/docs/advanced-features/dynamic-import) して表示するようにしてます。
 
 MDXの文書そのままでは当然import出来ないのでwebpackのLoaderを通す必要があります。  
 `next.config.js`を以下の様に編集し、拡張子が`.mdx`のファイルは`@mdx-js/loader`を通します。
@@ -187,7 +187,7 @@ fs.writeFileSync(path.join(process.cwd(), 'gen/articles.json'), json)
 若干力技な感じもしていて、もう少しいい方法無いかなーとも思ったんですが、とりあえずJSONに吐き出しておけば再利用もしやすいのでまあ良いかという気持ちです。
 
 余談ですがこの記事書く時に Front Matter の正しい名称が分からなくて困った。  
-人によって「YAML Front Matter」だったり「Frontmatter」だったり「Front-matter」だったりと表記ゆれが激しくて、結局今もどれが正しいのか分かってないです（特に統一されてない...？）。
+人によって「YAML Front Matter」だったり「Frontmatter」だったり「Front-matter」だったりと表記ゆれが激しくて、結局今もどれが正しいのか分かってないです（特に統一とかされてない...？）。
 
 
 
