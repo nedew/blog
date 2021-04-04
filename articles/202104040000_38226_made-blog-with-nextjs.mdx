@@ -58,6 +58,9 @@ export default ({children}) => {
 MDXの文書そのままでは当然import出来ないのでwebpackのLoaderを通す必要があります。  
 `next.config.js`を以下の様に編集し、拡張子が`.mdx`のファイルは`@mdx-js/loader`を通します。
 
+またここでFront MatterをexportするLoaderも通していますが（`path.join(__dirname, "./lib/fm-loader")`の部分）、ここらへんで何が起こってるのかあまり理解できてません。  
+一つのデータに複数のLoaderを実行する場合のwebpackの動きとか、`@mdx-js/loader`が何を吐き出しているのかを理解しないとな...と思ってます。
+
 ```js
 // next.config.js
 
@@ -85,7 +88,7 @@ module.exports = {
 }
 ```
 
-これでMDXで書いた各記事がReactコンポーネントとしてimport出来るようになったので、`pages/articles/[slug].ts`でDynamic importして使うだけです。
+とにかくこれでMDXで書いた各記事がReactコンポーネントとしてimport出来るようになったので、`pages/articles/[slug].ts`でDynamic importして使うだけです。
 
 
 ```jsx
@@ -129,7 +132,7 @@ Prism.jsを使う場合ブラウザ側でスクリプトを読み込んで変換
 （テーマは公式サイトで見れるものの他に[GitHub](https://github.com/PrismJS/prism-themes)にもいくつかある）
 
 
-## 記事のメタ情報をFront Matterで書きたい
+## 記事のメタデータをFront Matterで書きたい
 
 タグや作成日、タイトル等の各記事のメタデータをYAML Front Matterで書きたかった。
 
@@ -149,7 +152,7 @@ tags: [blog, markdown, diary]
 - some text 2
 ```
 
-MDXでFront Matterを使う方法は色々あると思うんですが、今回は記事ページ以外の色々なページで記事のメタ情報を使いたかったので、Next.jsのビルド直前に以下のようなスクリプトを実行して記事のメタ情報をまとめたJSONファイルを生成し、その後のNext.jsのSSGのプロセスでメタ情報が欲しい時は生成したJSONファイルから取ってくるようにしました。
+MDXでFront Matterを使う方法は色々あると思うんですが、今回は記事ページ以外の色々なページで記事のメタデータを使いたかったので、前述したwebpack Loaderの他に、Next.jsのビルド直前に以下のようなスクリプトを実行して記事のメタデータをまとめたJSONファイルを生成し、その後のNext.jsのSSGのプロセスでメタデータが欲しい時は生成したJSONファイルから取ってくるようにしました。
 
 
 ```js
@@ -207,5 +210,6 @@ node-canvasを使って記事タイトルから上のようなOGP画像を生成
 - 個人的にはそれなりに使いやすいものが出来たと思ってる
 - Next.jsを触ってみて結構楽しかったので、もっと掘り下げて触ってみたい
 - よく分かってなかった`webpack`の雰囲気を知れたのは良かった
+  - ここは雰囲気だけでなくちゃんと理解したい
 - CSSはあまり気に入ってないので改善必須
 - 冗長な処理が多い気がするので見直したい
