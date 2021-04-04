@@ -58,9 +58,6 @@ export default ({children}) => {
 MDXの文書そのままでは当然import出来ないのでwebpackのLoaderを通す必要があります。  
 `next.config.js`を以下の様に編集し、拡張子が`.mdx`のファイルは`@mdx-js/loader`を通します。
 
-またここでFront MatterをexportするLoaderも通していますが（`path.join(__dirname, "./lib/fm-loader")`の部分）、ここらへんで何が起こってるのかあまり理解できてません。  
-一つのデータに複数のLoaderを実行する場合のwebpackの動きとか、`@mdx-js/loader`が何を吐き出しているのかを理解しないとな...と思ってます。
-
 ```js
 // next.config.js
 
@@ -87,6 +84,9 @@ module.exports = {
   },
 }
 ```
+
+またここでFront MatterをexportするLoaderも通していますが（`path.join(__dirname, "./lib/fm-loader")`の部分）、ここらへんで何が起こってるのかあまり理解できてません。  
+一つのデータに複数のLoaderを実行する場合のwebpackの動きとか、`@mdx-js/loader`が何を吐き出しているのかを理解しないとな...と思ってます。
 
 とにかくこれでMDXで書いた各記事がReactコンポーネントとしてimport出来るようになったので、`pages/articles/[slug].ts`でDynamic importして使うだけです。
 
