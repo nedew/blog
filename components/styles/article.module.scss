@@ -152,6 +152,9 @@
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    @media screen and (max-width: $breakPoint) {
+      font-size: 14px;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
