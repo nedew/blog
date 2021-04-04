@@ -17,6 +17,10 @@
   }
 }
 
+.moon {
+  transform: rotate(45deg);
+}
+
 :root[data-theme=dark] {
   .moon {
     display: none;
